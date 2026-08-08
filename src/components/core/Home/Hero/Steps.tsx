@@ -41,7 +41,7 @@ const Steps = () => {
             </div>
 
             {index < steps.length - 1 && (
-              <div className="mx-3 mt-5 h-0.5 w-8 bg-green-400 sm:w-12" />
+              <div className="mx-3 mt-5 h-0.5 w-8 bg-linear-to-r from-orange-600 via-orange-400 to-orange-100 sm:w-12" />
             )}
           </div>
         );

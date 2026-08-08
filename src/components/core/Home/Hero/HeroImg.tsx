@@ -3,7 +3,7 @@ import { assets } from "@/src/assets/assets";
 
 const HeroImg = () => {
   return (
-    <div className="group relative mx-auto w-full max-w-xl">
+    <div className="group relative mx-auto w-full max-w-2xl">
       <Image
         src={assets.HeroImage}
         alt="Real Battle"
