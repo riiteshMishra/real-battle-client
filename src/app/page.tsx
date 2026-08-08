@@ -1,6 +1,7 @@
 import Features from "../components/core/Home/Features/Index";
 import HeroSection from "../components/core/Home/Hero/HeroSection";
 import HowItsWork from "../components/core/Home/how-its-work/Index";
+import Stats from "../components/core/Home/stats/Index";
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
       <HeroSection />
       <Features />
       <HowItsWork />
+      <Stats />
     </section>
   );
 };
