@@ -5,7 +5,7 @@ import FeaturesGrid from "./FeaturesGrid";
 
 const Features = () => {
   return (
-    <section id="features" className="min-h-screen py-10 md:py-18">
+    <section id="features" className="py-10 md:py-18">
       <Heading />
       <div className="max-w-40 bg-primary h-0.5 mx-auto rounded-ful my-10" />
 

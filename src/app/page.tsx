@@ -1,11 +1,13 @@
 import Features from "../components/core/Home/Features/Index";
 import HeroSection from "../components/core/Home/Hero/HeroSection";
+import HowItsWork from "../components/core/Home/how-its-work/Index";
 
 const Home = () => {
   return (
     <section className="relative min-h-screen overflow-hidden">
       <HeroSection />
       <Features />
+      <HowItsWork />
     </section>
   );
 };

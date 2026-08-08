@@ -28,8 +28,8 @@ export const navLinks = [
   },
   {
     id: 3,
-    title: "Tournaments",
-    href: "#tournaments",
+    title: "How It Works",
+    href: "#how-it-works",
     icon: Trophy,
   },
   {
