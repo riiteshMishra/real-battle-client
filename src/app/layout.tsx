@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Sekuya } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/common/navbar/Navbar";
 import ThemeProvider from "../providers/theme-provider";
+import { Toaster } from "sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -88,6 +89,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} ${sekuya.variable} h-full antialiased`}
     >
       <body>
+        <Toaster position="top-right" />
         <ThemeProvider>
           <Navbar />
           {children}
