@@ -1,3 +1,4 @@
+import FinalCta from "../components/core/Home/CTA/Index";
 import HomepageFaq from "../components/core/Home/Faq/HomepageFaq";
 import Features from "../components/core/Home/Features/Index";
 import HeroSection from "../components/core/Home/Hero/HeroSection";
@@ -14,6 +15,7 @@ const Home = () => {
       <Stats />
       <SupportedGames />
       <HomepageFaq />
+      <FinalCta />
     </section>
   );
 };
