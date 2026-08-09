@@ -4,6 +4,9 @@ import ChooseYourTour from "./how-it-works/choose-your-tournament.jpg";
 import JoinAndCompete from "./how-it-works/join-and-compete.jpg";
 import PlayAndGetResult from "./how-it-works/play-and-get-result.jpg";
 import WinAndGetRewarded from "./how-it-works/win-and-get-rewarded.jpg";
+import FreeFire from "./games/free-fire.png";
+import BGMI from "./games/bgmi.png";
+import COD from "./games/cod.png";
 
 export const assets = {
   HeroImage,
@@ -12,4 +15,7 @@ export const assets = {
   JoinAndCompete,
   PlayAndGetResult,
   WinAndGetRewarded,
+  FreeFire,
+  BGMI,
+  COD,
 };
