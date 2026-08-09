@@ -1,3 +1,4 @@
+import ContactUs from "../components/core/Home/contact/Index";
 import FinalCta from "../components/core/Home/CTA/Index";
 import HomepageFaq from "../components/core/Home/Faq/HomepageFaq";
 import Features from "../components/core/Home/Features/Index";
@@ -16,6 +17,7 @@ const Home = () => {
       <SupportedGames />
       <HomepageFaq />
       <FinalCta />
+      <ContactUs />
     </section>
   );
 };
