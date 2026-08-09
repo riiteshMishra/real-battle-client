@@ -4,7 +4,7 @@ interface HeadingProps {
 }
 
 const SubHeading = ({ title, className = "" }: HeadingProps) => {
-  return <h2 className={`text-3xl font-bold ${className}`}>{title}</h2>;
+  return <h2 className={`font-bold ${className}`}>{title}</h2>;
 };
 
 export default SubHeading;
