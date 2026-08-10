@@ -3,9 +3,9 @@
 
 :root {
   /* Fonts */
-  --font-geist-sans: var(--font-geist-sans);
+  /* --font-geist-sans: var(--font-geist-sans);
   --font-geist-mono: var(--font-geist-mono);
-  --font-sekuya: var(--font-sekuya);
+  --font-sekuya: var(--font-sekuya); */
 
   /* Base */
   --background: #f6f5f2;
@@ -47,6 +47,7 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-sekuya: var(--font-sekuya);
+  --font-bricolage: var(--font-bricolage);
 
   /* Colors */
   --color-background: var(--background);
@@ -63,6 +64,8 @@
   --color-card: var(--card);
 }
 
+* {
+}
 /* Chrome, Edge, Safari */
 ::-webkit-scrollbar {
   display: none;

@@ -1,9 +1,9 @@
 const Heading = () => {
   return (
-    <h3 className="text-4xl lg:text-6xl w-80 sm:w-auto capitalize mx-auto text-center font-sekuya  font-bold">
-      How it's <br className="sm:hidden block" />
+    <h3 className="text-[clamp(1.8rem,4vw,3rem)] w-80 sm:w-auto capitalize mx-auto text-center font-sekuya  font-bold max-w-5xl">
+      How it <br className="sm:hidden block" />
       <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-500 via-cyan-400 to-orange-500">
-        <strong>work !</strong>
+        <strong>works !</strong>
       </span>
     </h3>
   );

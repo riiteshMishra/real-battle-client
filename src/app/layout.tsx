@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Sekuya } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Sekuya,
+  Bitcount_Prop_Single,
+  Bricolage_Grotesque,
+} from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/common/navbar/Navbar";
 import ThemeProvider from "../providers/theme-provider";
@@ -20,6 +26,11 @@ const sekuya = Sekuya({
   subsets: ["latin"],
   weight: "400",
   adjustFontFallback: false,
+});
+
+const bricolage = Bricolage_Grotesque({
+  variable: "--font-bricolage",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -86,7 +97,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable} ${sekuya.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${sekuya.variable} ${bricolage.variable} h-full antialiased`}
     >
       <body>
         <Toaster position="top-right" />

@@ -5,7 +5,7 @@ const Heading = () => {
         FAQ
       </p>
 
-      <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
+      <h2 className="text-[clamp(1.8rem,4vw,3rem)] w-80 sm:w-auto capitalize mx-auto text-center font-sekuya  font-bold max-w-5xl">
         Frequently Asked{" "}
         <span className="bg-linear-to-r from-purple-500 via-cyan-400 to-orange-500 bg-clip-text text-transparent">
           Questions

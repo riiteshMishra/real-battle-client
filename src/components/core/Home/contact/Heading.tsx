@@ -5,7 +5,7 @@ const Heading = () => {
         Get In Touch
       </p>
 
-      <h2 className="text-4xl font-bold sm:text-5xl">
+      <h2 className="text-[clamp(1.8rem,4vw,3rem)] w-80 sm:w-auto capitalize mx-auto text-center font-sekuya  font-bold max-w-5xl">
         Let&apos;s{" "}
         <span className="bg-linear-to-r from-purple-500 via-cyan-400 to-orange-500 bg-clip-text text-transparent">
           Connect

@@ -11,7 +11,7 @@ const HeroSection = () => {
       <div className="max-w-40 bg-primary h-0.5 mx-auto rounded-ful my-10" />
       <SubHeading
         title={homeData.subHeading}
-        className="text-center capitalize text-sm sm:text max-w-100 mx-auto"
+        className="text-center font-bricolage font-medium capitalize text-sm sm:text max-w-95 mx-auto"
       />
       <Steps />
       <HeroImg />
