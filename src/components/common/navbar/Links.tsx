@@ -8,7 +8,7 @@ interface LinksProp {
 const Links = ({ title, href }: LinksProp) => {
   return (
     <li>
-      <Link href={href} title={title} className="font-semibold text-sm">
+      <Link href={href} title={title} className=" text-sm">
         {title}
       </Link>
     </li>

@@ -1,25 +1,9 @@
 import type { Metadata } from "next";
-import {
-  Geist,
-  Geist_Mono,
-  Sekuya,
-  Bitcount_Prop_Single,
-  Bricolage_Grotesque,
-} from "next/font/google";
+import { Sekuya, Bricolage_Grotesque, Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/common/navbar/Navbar";
 import ThemeProvider from "../providers/theme-provider";
 import { Toaster } from "sonner";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const sekuya = Sekuya({
   variable: "--font-sekuya",
@@ -30,6 +14,11 @@ const sekuya = Sekuya({
 
 const bricolage = Bricolage_Grotesque({
   variable: "--font-bricolage",
+  subsets: ["latin"],
+});
+
+const roboto = Roboto({
+  variable: "--font-roboto",
   subsets: ["latin"],
 });
 
@@ -97,7 +86,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable} ${sekuya.variable} ${bricolage.variable} h-full antialiased`}
+      className={`${roboto.variable} ${sekuya.variable} ${bricolage.variable} h-full antialiased`}
     >
       <body>
         <Toaster position="top-right" />

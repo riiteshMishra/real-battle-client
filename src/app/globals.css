@@ -44,10 +44,9 @@
 
 @theme inline {
   /* Fonts */
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
   --font-sekuya: var(--font-sekuya);
   --font-bricolage: var(--font-bricolage);
+  --font-roboto: var(--font-roboto);
 
   /* Colors */
   --color-background: var(--background);
