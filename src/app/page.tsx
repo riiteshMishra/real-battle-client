@@ -1,3 +1,4 @@
+import Footer from "../components/common/footer/Footer";
 import ContactUs from "../components/core/Home/contact/Index";
 import FinalCta from "../components/core/Home/CTA/Index";
 import HomepageFaq from "../components/core/Home/Faq/HomepageFaq";
@@ -18,6 +19,7 @@ const Home = () => {
       <HomepageFaq />
       <FinalCta />
       <ContactUs />
+      <Footer />
     </section>
   );
 };
