@@ -5,7 +5,7 @@ interface FaqItemProps {
 
 const FaqItem = ({ question, answer }: FaqItemProps) => {
   return (
-    <details className="group overflow-hidden rounded-2xl border border-foreground/10 bg-foreground/3 transition-all duration-300 hover:border-primary/30 open:border-primary/30 open:bg-primary/3 select-none">
+    <details className="group overflow-hidden rounded-2xl border border-foreground/10 bg-foreground/3 transition-all duration-300 hover:border-primary/30 open:border-primary/30 open:bg-primary/3 select-none font-roboto">
       <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-5 text-sm font-semibold sm:px-6 sm:text-base">
         <span>{question}</span>
 

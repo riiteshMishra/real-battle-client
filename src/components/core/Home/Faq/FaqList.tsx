@@ -1,11 +1,15 @@
-import { faqData } from "@/src/data/faq-data";
+import { FAQ, faqData } from "@/src/data/faq-data";
 import FaqItem from "./FaqItem";
 
-const FaqList = () => {
-  const topFaqs = faqData.slice(0, 7);
+interface FaqListProp {
+  faqList?: FAQ[];
+}
+
+const FaqList = ({ faqList }: FaqListProp) => {
+  const topFaqs = faqList ? faqList : faqData.slice(0, 7);
 
   return (
-    <div className="space-y-3">
+    <div className="space-y-3 max-w-xl mx-auto w-11/12">
       {topFaqs.map((faq) => (
         <FaqItem key={faq.id} question={faq.question} answer={faq.answer} />
       ))}
