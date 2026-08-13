@@ -23,25 +23,25 @@ export const navLinks = [
   {
     id: 2,
     title: "Features",
-    href: "#features",
+    href: "/#features",
     icon: Sparkle,
   },
   {
     id: 3,
     title: "How It Works",
-    href: "#how-it-works",
+    href: "/#how-it-works",
     icon: Trophy,
   },
   {
     id: 4,
     title: "FAQ",
-    href: "#faq",
+    href: "/#faq",
     icon: CircleHelp,
   },
   {
     id: 5,
     title: "Contact",
-    href: "#contact",
+    href: "/#contact",
     icon: Mail,
   },
 ];

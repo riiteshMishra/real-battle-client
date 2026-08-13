@@ -14,7 +14,7 @@ const Card = ({ name, description, image, status }: CardProps) => {
 
   return (
     <article className="group overflow-hidden rounded-2xl border border-white dark:border-0 shadow-2xl px-4 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-white/20 bg-[#d0f3fa] dark:bg-[#2f3f46] py-5">
-      <div className="relative aspect-video overflow-hidden rounded-xl">
+      <div className="relative aspect-video overflow-hidden rounded-xl border  p-4">
         <Image
           src={image}
           alt={name}
