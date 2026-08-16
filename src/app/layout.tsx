@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import { Sekuya, Bricolage_Grotesque, Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/common/navbar/Navbar";
-import ThemeProvider from "../providers/theme-provider";
 import { Toaster } from "sonner";
-import SmoothScroll from "../components/common/SmoothScroll";
+import Providers from "../providers/Index";
 
 const sekuya = Sekuya({
   variable: "--font-sekuya",
@@ -91,12 +90,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body>
         <Toaster position="top-right" />
-        <SmoothScroll>
-          <ThemeProvider>
-            <Navbar />
-            {children}
-          </ThemeProvider>
-        </SmoothScroll>
+        <Providers>
+          <Navbar />
+          {children}
+        </Providers>
       </body>
     </html>
   );
