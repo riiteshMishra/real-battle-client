@@ -8,6 +8,12 @@ interface FormInputProps {
   error?: string;
   disabled?: boolean;
   type?: string;
+
+  // Custom styling
+  containerClassName?: string;
+  labelClassName?: string;
+  inputClassName?: string;
+  errorClassName?: string;
 }
 
 export const FormInput: React.FC<FormInputProps> = ({
@@ -17,25 +23,45 @@ export const FormInput: React.FC<FormInputProps> = ({
   error,
   disabled = false,
   type = "text",
+  containerClassName = "",
+  labelClassName = "",
+  inputClassName = "",
+  errorClassName = "",
 }) => {
   return (
-    <div>
-      <label className="mb-2 block text-sm font-medium">
+    <div className={`w-full ${containerClassName}`}>
+      <label
+        className={`mb-2 block text-sm font-medium text-foreground ${labelClassName}`}
+      >
         {label}
-        <span className="text-red-500">*</span>
+        <span className="ml-1 text-red-500">*</span>
       </label>
+
       <input
         type={type}
         placeholder={placeholder}
         disabled={disabled}
         {...register}
-        className={`w-full rounded-xl border px-4 py-3 text-sm outline-none transition ${
-          error
-            ? "border-red-500/50 bg-red-500/5 focus:border-red-500"
-            : "border-foreground/10 bg-background focus:border-primary"
-        } disabled:opacity-50 disabled:cursor-not-allowed`}
+        className={`
+          w-full rounded-xl border px-4 py-3
+          text-sm text-foreground
+          outline-none transition-all duration-200
+          placeholder:text-muted-foreground
+          disabled:cursor-not-allowed disabled:opacity-50
+          ${
+            error
+              ? "border-red-500/50 bg-red-500/5 focus:border-red-500 focus:ring-2 focus:ring-red-500/10"
+              : "border-border bg-background hover:border-foreground/20 focus:border-primary focus:ring-2 focus:ring-primary/10"
+          }
+          ${inputClassName}
+        `}
       />
-      {error && <p className="mt-1 text-xs text-red-500">{error}</p>}
+
+      {error && (
+        <p className={`mt-1.5 text-xs text-red-500 ${errorClassName}`}>
+          {error}
+        </p>
+      )}
     </div>
   );
 };
