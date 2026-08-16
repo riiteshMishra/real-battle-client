@@ -1,9 +1,12 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { authRoutes } from "../../apis-data";
+import ApiConnector from "@/src/services/apiConnector";
+import { auth } from "@/src/configs/firebase";
+import { toast } from "sonner";
+import { getErrorMessage } from "@/src/utils/getMessages";
 
 export const login = async (email: string, password: string) => {
   try {
-    // Firebase pe login
     const userCredential = await signInWithEmailAndPassword(
       auth,
       email,
@@ -11,7 +14,6 @@ export const login = async (email: string, password: string) => {
     );
     const user = userCredential.user;
 
-    // Backend ko notify karo (session create karne ke liye)
     const response = await ApiConnector({
       method: "POST",
       url: authRoutes.LOGIN,
