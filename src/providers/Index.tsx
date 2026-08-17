@@ -2,32 +2,39 @@
 
 import { PropsWithChildren, useState } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ThemeProvider as NextThemesProvider } from "next-themes";
+import { ThemeProvider } from "next-themes";
+import { Provider as ReduxProvider } from "react-redux";
+import store from "../store/store";
 
-const Providers = ({ children }: PropsWithChildren) => {
-  // TANSTACK QUERY
-  const [queryClient] = useState(
-    () =>
-      new QueryClient({
-        defaultOptions: {
-          queries: {
-            staleTime: 60 * 1000,
-            refetchOnWindowFocus: false,
-          },
-        },
-      }),
-  );
+// TANSTACK QUERY SETUP
+const createQueryClient = () =>
+  new QueryClient({
+    defaultOptions: {
+      queries: {
+        staleTime: 60 * 1000,
+        refetchOnWindowFocus: false,
+      },
+    },
+  });
+
+const RootProviders = ({ children }: PropsWithChildren) => {
+  // INITIALIZE QUERY CLIENT
+  const [queryClient] = useState(() => createQueryClient());
 
   return (
-    <NextThemesProvider
-      attribute="class"
-      defaultTheme="light"
-      enableSystem={false}
-      disableTransitionOnChange
-    >
-      <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
-    </NextThemesProvider>
+    <ReduxProvider store={store}>
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="light"
+        enableSystem={false}
+        disableTransitionOnChange
+      >
+        <QueryClientProvider client={queryClient}>
+          {children}
+        </QueryClientProvider>
+      </ThemeProvider>
+    </ReduxProvider>
   );
 };
 
-export default Providers;
+export default RootProviders;

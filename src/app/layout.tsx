@@ -3,8 +3,9 @@ import { Sekuya, Bricolage_Grotesque, Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/common/navbar/Navbar";
 import { Toaster } from "sonner";
-import Providers from "../providers/Index";
+import RootProviders from "../providers/Index";
 
+// FONTS
 const sekuya = Sekuya({
   variable: "--font-sekuya",
   subsets: ["latin"],
@@ -22,6 +23,7 @@ const roboto = Roboto({
   subsets: ["latin"],
 });
 
+// META - DATA
 export const metadata: Metadata = {
   title: {
     default: "Real Battle — Compete, Play & Win",
@@ -81,6 +83,7 @@ export const metadata: Metadata = {
   },
 };
 
+// ROOT - LAYOUT
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
@@ -90,10 +93,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body>
         <Toaster position="top-right" />
-        <Providers>
+        <RootProviders>
           <Navbar />
           {children}
-        </Providers>
+        </RootProviders>
       </body>
     </html>
   );
