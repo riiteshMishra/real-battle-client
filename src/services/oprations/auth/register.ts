@@ -33,14 +33,13 @@ export const registerUser = async ({
     const response = await ApiConnector({
       method: "POST",
       url: authRoutes.REGISTER,
-      body: {
-        name,
-        email: user.email,
-        idToken,
+      body: { name },
+      headers: {
+        Authorization: `Bearer ${idToken}`,
       },
     });
-
-    return response.data;
+    console.log("response", response);
+    return response;
   } catch (err) {
     throw new Error(getErrorMessage(err, "Registration failed"));
   }

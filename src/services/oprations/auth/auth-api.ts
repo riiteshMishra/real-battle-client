@@ -1,32 +1,17 @@
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { authRoutes } from "../../apis-data";
-import ApiConnector from "@/src/services/apiConnector";
-import { auth } from "@/src/configs/firebase";
+import { getErrorMessage, getSuccessMessage } from "@/src/utils/getMessages";
 import { toast } from "sonner";
-import { getErrorMessage } from "@/src/utils/getMessages";
+import apiConnector from "../../apiConnector";
+import { authRoutes } from "../../apis-data";
 
-export const login = async (email: string, password: string) => {
+export const rebaseAuth = async () => {
   try {
-    const userCredential = await signInWithEmailAndPassword(
-      auth,
-      email,
-      password,
-    );
-    const user = userCredential.user;
-
-    const response = await ApiConnector({
+    const response = await apiConnector({
       method: "POST",
-      url: authRoutes.LOGIN,
-      body: {
-        uid: user.uid,
-        email: user.email,
-      },
+      url: authRoutes.GET_ME,
     });
 
-    toast.success("Login successful!");
-    return response.data;
+    toast.success(getSuccessMessage(response));
   } catch (err) {
-    toast.error(getErrorMessage(err, "Login failed"));
-    throw err;
+    toast.error(getErrorMessage(err));
   }
 };
