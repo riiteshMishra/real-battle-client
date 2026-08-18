@@ -79,16 +79,10 @@ const CTAButton = ({
       onMouseLeave={() => setIsHovered(false)}
       whileTap={{ scale: 0.95 }}
     >
-      {/* ICON */}
-      {icon && <span>{icon}</span>}
-
-      {/* TEXT */}
-      <span>{isLoading ? "Loading..." : children}</span>
-
-      {/* LOADING SPINNER */}
-      {isLoading && (
+      {isLoading ? (
+        // LOADING STATE - ONLY SPINNER
         <motion.div
-          className="ml-2 h-4 w-4 rounded-full border-2 border-current border-t-transparent"
+          className="h-5 w-5 rounded-full border-2 border-current border-t-transparent"
           animate={{ rotate: 360 }}
           transition={{
             duration: 1,
@@ -96,6 +90,12 @@ const CTAButton = ({
             ease: "linear",
           }}
         />
+      ) : (
+        // NORMAL STATE - ICON + TEXT
+        <>
+          {icon && <span>{icon}</span>}
+          <span>{children}</span>
+        </>
       )}
     </motion.button>
   );
