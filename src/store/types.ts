@@ -4,6 +4,7 @@ export interface USER {
   name: string | null;
   email: string | null;
   role: string | null;
+  avatar: string | null;
 }
 
 // AUTH STATE - INTERFACE
