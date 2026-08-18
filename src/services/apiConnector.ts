@@ -13,7 +13,7 @@ interface ApiConnectorProps {
   params?: Record<string, unknown>;
 }
 
-const ApiConnector = async ({
+const apiConnector = async ({
   method,
   url,
   body,
@@ -29,11 +29,11 @@ const ApiConnector = async ({
       params,
     });
 
-    return response;
+    return response.data;
   } catch (error) {
     console.error("API Error:", error);
     throw error;
   }
 };
 
-export default ApiConnector;
+export default apiConnector;

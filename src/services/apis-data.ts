@@ -8,6 +8,7 @@ export const authRoutes = {
   LOGIN: "/api/v1/auth/login",
   GOOGLE_SIGN_IN: "/api/v1/auth/google-signin",
   LOGOUT: "/api/v1/auth/logout",
+  GET_ME: "/api/v1/auth/me",
   REFRESH_TOKEN: "/api/v1/auth/refresh-token",
   VERIFY_EMAIL: "/api/v1/auth/verify-email",
   SEND_VERIFICATION_EMAIL: "/api/v1/auth/send-verification-email",
