@@ -4,6 +4,7 @@ import { auth } from "@/src/configs/firebase";
 import { getErrorMessage } from "@/src/utils/getMessages";
 import ApiConnector from "../../apiConnector";
 import { authRoutes } from "../../apis-data";
+import { AUTH_RESPONSE } from "@/src/types/auth";
 
 interface RegisterPayload {
   name: string;
@@ -15,7 +16,7 @@ export const registerUser = async ({
   name,
   email,
   password,
-}: RegisterPayload) => {
+}: RegisterPayload): Promise<AUTH_RESPONSE> => {
   try {
     // FIREBASE ME USER CREATE
     const userCredential = await createUserWithEmailAndPassword(
@@ -30,7 +31,7 @@ export const registerUser = async ({
     const idToken = await user.getIdToken();
 
     // BACKEND KO SEND
-    const response = await ApiConnector({
+    const response = await ApiConnector<AUTH_RESPONSE>({
       method: "POST",
       url: authRoutes.REGISTER,
       body: { name },
@@ -38,8 +39,7 @@ export const registerUser = async ({
         Authorization: `Bearer ${idToken}`,
       },
     });
-    console.log("response", response);
-    return response;
+    return response.data;
   } catch (err) {
     throw new Error(getErrorMessage(err, "Registration failed"));
   }

@@ -4,8 +4,9 @@ import apiConnector from "../../apiConnector";
 import { authRoutes } from "../../apis-data";
 import { auth } from "@/src/configs/firebase";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { AUTH_RESPONSE } from "@/src/types/auth";
 
-export const googleLogin = async () => {
+export const googleLogin = async (): Promise<AUTH_RESPONSE> => {
   try {
     // GOOGLE AUTH PROVIDER
     const provider = new GoogleAuthProvider();
@@ -17,7 +18,7 @@ export const googleLogin = async () => {
     const idToken = await userCredential.user.getIdToken();
 
     // SEND TO BACKEND
-    const response = await apiConnector({
+    const response = await apiConnector<AUTH_RESPONSE>({
       method: "POST",
       url: authRoutes.GOOGLE_SIGN_IN,
       body: {
@@ -26,8 +27,8 @@ export const googleLogin = async () => {
     });
 
     // RETURN
-    return response;
-  } catch (error: any) {
+    return response.data;
+  } catch (error: unknown) {
     toast.error(getErrorMessage(error));
     throw new Error("Google login failed");
   }
