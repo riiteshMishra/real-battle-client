@@ -3,42 +3,16 @@
 "use client";
 
 import React from "react";
-import { useAppSelector, useAppDispatch } from "@/src/store/hooks";
-import { logoutSuccess } from "@/src/store/slices/auth.slice";
-import { toast } from "sonner";
-import { useRouter } from "next/navigation";
+import { useAppSelector } from "@/src/store/hooks";
 import Link from "next/link";
 import Image from "next/image";
+import Logout from "../Logout";
 
 const AccountMenu = () => {
   const { currentUser, isAuthenticated } = useAppSelector(
     (state) => state.auth,
   );
-  const dispatch = useAppDispatch();
-  const router = useRouter();
   const [showMenu, setShowMenu] = React.useState(false);
-
-  const handleLogout = async () => {
-    try {
-      // CALL LOGOUT API
-      await fetch("/api/auth/logout", {
-        method: "POST",
-        credentials: "include",
-      });
-
-      // DISPATCH LOGOUT
-      dispatch(logoutSuccess());
-
-      // SHOW SUCCESS MESSAGE
-      toast.success("Logged out successfully!");
-
-      // REDIRECT
-      router.push("/");
-      setShowMenu(false);
-    } catch (error) {
-      toast.error("Logout failed");
-    }
-  };
 
   // NOT AUTHENTICATED
   if (!isAuthenticated || !currentUser) {
@@ -60,6 +34,7 @@ const AccountMenu = () => {
           width={32}
           height={32}
           className=" rounded-full"
+          unoptimized
         />
         {/* NAME (HIDDEN ON MOBILE) */}
         <span className="hidden sm:inline text-sm font-medium">
@@ -94,12 +69,7 @@ const AccountMenu = () => {
           </Link>
 
           {/* LOGOUT BUTTON */}
-          <button
-            onClick={handleLogout}
-            className="w-full text-left px-4 py-2 text-sm text-red-500 hover:bg-muted transition"
-          >
-            Logout
-          </button>
+          <Logout />
         </div>
       )}
     </div>
