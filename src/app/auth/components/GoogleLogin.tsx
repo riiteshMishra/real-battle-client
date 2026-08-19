@@ -20,7 +20,7 @@ const GoogleLogin = () => {
       const response = await googleLogin();
 
       // CHECK IF SUCCESSFUL
-      if (response?.success && response?.user) {
+      if (response.success && response.user) {
         // DISPATCH LOGIN SUCCESS
         dispatch(loginSuccess(response.user));
 
