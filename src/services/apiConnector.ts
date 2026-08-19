@@ -13,13 +13,13 @@ interface ApiConnectorProps {
   params?: Record<string, unknown>;
 }
 
-const apiConnector = async ({
+const apiConnector = async <T = unknown>({
   method,
   url,
   body,
   headers,
   params,
-}: ApiConnectorProps): Promise<AxiosResponse> => {
+}: ApiConnectorProps): Promise<AxiosResponse<T>> => {
   try {
     const response = await axiosInstance({
       method,
@@ -29,9 +29,14 @@ const apiConnector = async ({
       params,
     });
 
-    return response.data;
-  } catch (error) {
-    console.error("API Error:", error);
+    return response;
+  } catch (error: any) {
+    console.error("API Error:", error.message);
+
+    if (error.response?.status === 401) {
+      console.warn("Unauthorized - Token might be expired");
+    }
+
     throw error;
   }
 };
