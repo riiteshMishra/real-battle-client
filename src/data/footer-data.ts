@@ -100,7 +100,7 @@ export const footerData: FooterSection[] = [
       {
         id: 9,
         text: "Privacy Policy",
-        href: "/privacy",
+        href: "/privacy-policy",
         icon: Shield,
       },
       {
