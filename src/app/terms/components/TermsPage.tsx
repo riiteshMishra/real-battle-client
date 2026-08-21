@@ -1,0 +1,48 @@
+import TermsHero from "./hero/TermsHero";
+import TermsOverview from "./overview/TermsOverview";
+import TermsTableOfContents from "./TableOfContents/TermsTableOfContents";
+import TermsSections from "./Sections/TermsSections";
+import TermsFAQ from "./FAQ/TermsFAQ";
+import TermsActions from "./Actions/TermsActions";
+import TermsContact from "./Contact/TermsContact";
+import Footer from "@/src/components/common/footer/Footer";
+
+const TermsPage = () => {
+  return (
+    <div
+      className="
+        min-h-screen
+        bg-slate-50
+        text-slate-900
+
+        dark:bg-slate-950
+        dark:text-slate-100
+
+        bg-[radial-gradient(circle,rgba(59,130,246,0.14)_1px,transparent_1px)]
+        dark:bg-[radial-gradient(circle,rgba(96,165,250,0.10)_1px,transparent_1px)]
+
+        bg-size-[24px_24px]
+      "
+    >
+      <TermsHero />
+
+      <main id="main-content" className="mx-auto max-w-4xl px-4 py-12 md:py-16">
+        <TermsOverview />
+
+        <TermsTableOfContents />
+
+        <TermsSections />
+
+        <TermsFAQ />
+
+        <TermsActions />
+
+        <TermsContact />
+      </main>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default TermsPage;
