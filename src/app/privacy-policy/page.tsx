@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "/privacy",
+    canonical: "/privacy-policy",
   },
 
   openGraph: {
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     description:
       "Learn how Real Battle protects your personal information when you participate in Free Fire tournaments and online gaming services.",
     type: "website",
-    url: "/privacy",
+    url: "/privacy-policy",
     siteName: "Real Battle",
   },
 
