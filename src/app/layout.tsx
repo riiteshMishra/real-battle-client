@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
-import { Sekuya, Bricolage_Grotesque, Roboto } from "next/font/google";
+import { Sekuya, Bricolage_Grotesque, Roboto, Geist } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/common/navbar/Navbar";
 import { Toaster } from "sonner";
 import RootProviders from "../providers/Index";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+
 
 // FONTS
 const sekuya = Sekuya({
@@ -89,7 +93,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${roboto.variable} ${sekuya.variable} ${bricolage.variable} h-full antialiased`}
+      className={cn("h-full", "antialiased", roboto.variable, sekuya.variable, bricolage.variable, "font-sans", geist.variable)}
     >
       <body>
         <Toaster position="top-right" />
