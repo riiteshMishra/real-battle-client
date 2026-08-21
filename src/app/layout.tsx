@@ -6,8 +6,7 @@ import { Toaster } from "sonner";
 import RootProviders from "../providers/Index";
 import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
-
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 // FONTS
 const sekuya = Sekuya({
@@ -29,6 +28,8 @@ const roboto = Roboto({
 
 // META - DATA
 export const metadata: Metadata = {
+  metadataBase: new URL("https://realbattle.in"),
+
   title: {
     default: "Real Battle — Compete, Play & Win",
     template: "%s | Real Battle",
@@ -93,7 +94,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("h-full", "antialiased", roboto.variable, sekuya.variable, bricolage.variable, "font-sans", geist.variable)}
+      className={cn(
+        "h-full",
+        "antialiased",
+        roboto.variable,
+        sekuya.variable,
+        bricolage.variable,
+        "font-sans",
+        geist.variable,
+      )}
     >
       <body>
         <Toaster position="top-right" />
