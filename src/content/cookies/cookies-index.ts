@@ -9,7 +9,6 @@ import { thirdPartyCookiesSection } from "./sections/third-party-cookies";
 import { manageCookiesSection } from "./sections/manage-cookies";
 import { disabledCookiesSection } from "./sections/disabled-cookies";
 import { changesSection } from "./sections/changes";
-import { contactSection } from "./sections/contact";
 
 import { CookieSection } from "./types";
 
