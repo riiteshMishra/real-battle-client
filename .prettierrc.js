@@ -2,3 +2,5 @@
 export default {
     plugins: ["prettier-plugin-tailwindcss"],
 };
+
+// pnpm prettier --write "src/**/*.{ts,tsx}"
