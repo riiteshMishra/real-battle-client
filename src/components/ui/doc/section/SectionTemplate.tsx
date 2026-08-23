@@ -22,30 +22,9 @@ const SectionTemplate = ({ sections, title }: SectionTemplateProps) => {
           <article
             key={section.id}
             id={section.id}
-            className="
-              scroll-mt-24
-              rounded-xl
-              border
-              border-slate-200
-              bg-white
-              p-6
-              shadow-sm
-              dark:border-slate-800
-              dark:bg-slate-950/60
-              md:p-8
-            "
+            className="scroll-mt-24 rounded-xl border border-slate-200 bg-white p-6 shadow-sm md:p-8 dark:border-slate-800 dark:bg-slate-950/60"
           >
-            <h3
-              className="
-                mb-5
-                text-xl
-                font-bold
-                tracking-tight
-                text-slate-900
-                dark:text-slate-100
-                md:text-2xl
-              "
-            >
+            <h3 className="mb-5 text-xl font-bold tracking-tight text-slate-900 md:text-2xl dark:text-slate-100">
               {section.title}
             </h3>
 

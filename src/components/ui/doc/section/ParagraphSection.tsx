@@ -10,13 +10,7 @@ const ParagraphSection = ({ section }: ParagraphSectionProps) => {
       {section.content.map((paragraph, index) => (
         <p
           key={index}
-          className="
-            text-sm
-            leading-7
-            text-slate-700
-            md:text-base
-            dark:text-slate-300
-          "
+          className="text-sm leading-7 text-slate-700 md:text-base dark:text-slate-300"
         >
           {paragraph}
         </p>
