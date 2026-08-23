@@ -1,19 +1,20 @@
-import TermsHero from "./hero/TermsHero";
-import TermsOverview from "./overview/TermsOverview";
 import TermsTableOfContents from "./TableOfContents/TermsTableOfContents";
 import TermsSections from "./Sections/TermsSections";
 import TermsFAQ from "./FAQ/TermsFAQ";
 import TermsActions from "./Actions/TermsActions";
 import TermsContact from "./Contact/TermsContact";
 import Footer from "@/src/components/common/footer/Footer";
+import TermHero from "./TermHero";
+
+import TermOverview from "./TermOverview";
 
 const TermsPage = () => {
   return (
     <div className="min-h-screen bg-slate-50 bg-[radial-gradient(circle,rgba(59,130,246,0.14)_1px,transparent_1px)] bg-size-[24px_24px] text-slate-900 dark:bg-slate-950 dark:bg-[radial-gradient(circle,rgba(96,165,250,0.10)_1px,transparent_1px)] dark:text-slate-100">
-      <TermsHero />
+      <TermHero />
 
       <main id="main-content" className="mx-auto max-w-4xl px-4 py-12 md:py-16">
-        <TermsOverview />
+        <TermOverview />
 
         <TermsTableOfContents />
 
