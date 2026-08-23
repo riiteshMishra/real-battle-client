@@ -28,6 +28,8 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+
+  turbopack: {}, // DEFAULT BY NEXT
 };
 
 export default nextConfig;
