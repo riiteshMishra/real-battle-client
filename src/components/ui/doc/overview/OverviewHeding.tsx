@@ -2,7 +2,7 @@ import React from "react";
 
 interface OverviewHeding {
   title: string;
-  description: string;
+  description?: string;
 }
 
 const OverviewHeding = ({ title, description }: OverviewHeding) => {
