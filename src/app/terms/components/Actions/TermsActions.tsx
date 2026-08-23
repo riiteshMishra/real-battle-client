@@ -7,18 +7,7 @@ const TermsActions = () => {
   return (
     <section
       aria-labelledby="terms-actions-title"
-      className="
-        mb-12
-        rounded-xl
-        border border-indigo-200
-        bg-linear-to-r
-        from-indigo-50
-        to-blue-50
-        p-6 md:p-8
-        dark:border-indigo-900/50
-        dark:from-indigo-950/30
-        dark:to-blue-950/30
-      "
+      className="mb-12 rounded-xl border border-indigo-200 bg-linear-to-r from-indigo-50 to-blue-50 p-6 md:p-8 dark:border-indigo-900/50 dark:from-indigo-950/30 dark:to-blue-950/30"
     >
       <ActionsHeader
         title="Terms & Documents"

@@ -7,11 +7,11 @@ const Features = () => {
   return (
     <section id="features" className="py-10 md:py-18">
       <Heading />
-      <div className="max-w-40 bg-primary h-0.5 mx-auto rounded-ful my-10" />
+      <div className="bg-primary rounded-ful mx-auto my-10 h-0.5 max-w-40" />
 
       <SubHeading
         title={homeData.subHeading2}
-        className="text-center capitalize text-sm sm:text max-w-100 mx-auto"
+        className="sm:text mx-auto max-w-100 text-center text-sm capitalize"
       />
 
       <FeaturesGrid />

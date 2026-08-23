@@ -39,28 +39,11 @@ const TermsContactCard = ({
   return (
     <a
       href={`mailto:${email}`}
-      className={`
-        group
-        rounded-xl
-        border border-slate-200
-        bg-slate-50
-        p-5
-        transition-all
-        ${configItem.hoverBorder}
-        ${configItem.hoverBg}
-        dark:border-slate-800
-        dark:bg-slate-900/60
-      `}
+      className={`group rounded-xl border border-slate-200 bg-slate-50 p-5 transition-all ${configItem.hoverBorder} ${configItem.hoverBg} dark:border-slate-800 dark:bg-slate-900/60`}
     >
       <div className="mb-3 flex items-center gap-3">
         <div
-          className={`
-            flex h-9 w-9
-            shrink-0
-            items-center justify-center
-            rounded-lg
-            ${configItem.iconBg}
-          `}
+          className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg ${configItem.iconBg} `}
         >
           <Icon
             aria-hidden="true"
@@ -74,15 +57,7 @@ const TermsContactCard = ({
       </div>
 
       <span
-        className={`
-          block
-          break-all
-          font-semibold
-          text-slate-900
-          transition-colors
-          dark:text-slate-100
-          ${configItem.hoverText}
-        `}
+        className={`block font-semibold break-all text-slate-900 transition-colors dark:text-slate-100 ${configItem.hoverText} `}
       >
         {email}
       </span>

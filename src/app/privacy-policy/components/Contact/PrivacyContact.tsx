@@ -6,17 +6,7 @@ const PrivacyContact = () => {
   return (
     <section
       aria-labelledby="privacy-contact-title"
-      className="
-       mb-12
-        rounded-xl
-        border
-        border-blue-200
-        bg-linear-to-r from-blue-50 to-purple-50
-        p-6 md:p-8
-        dark:border-blue-900/50
-        dark:from-blue-950/30
-        dark:to-purple-950/30
-      "
+      className="mb-12 rounded-xl border border-blue-200 bg-linear-to-r from-blue-50 to-purple-50 p-6 md:p-8 dark:border-blue-900/50 dark:from-blue-950/30 dark:to-purple-950/30"
     >
       <PrivacyContactHeader />
 

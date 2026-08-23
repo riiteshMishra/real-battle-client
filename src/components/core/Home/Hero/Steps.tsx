@@ -27,7 +27,7 @@ const Steps = () => {
         return (
           <div key={step.title} className="flex items-start">
             <div className="flex flex-col items-center">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary sm:h-12 sm:w-12">
+              <div className="bg-primary/10 text-primary flex h-10 w-10 items-center justify-center rounded-xl sm:h-12 sm:w-12">
                 <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
               </div>
 
@@ -35,7 +35,7 @@ const Steps = () => {
                 {step.title}
               </h3>
 
-              <p className="mt-1 text-[8px] font-semibold sm:text-xs text-muted">
+              <p className="text-muted mt-1 text-[8px] font-semibold sm:text-xs">
                 {step.description}
               </p>
             </div>

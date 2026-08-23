@@ -6,15 +6,7 @@ const TermsContact = () => {
   return (
     <section
       aria-labelledby="terms-contact-title"
-      className="
-        mb-12
-        rounded-xl
-        border border-slate-200
-        bg-white
-        p-6 md:p-8
-        dark:border-slate-800
-        dark:bg-slate-950/60
-      "
+      className="mb-12 rounded-xl border border-slate-200 bg-white p-6 md:p-8 dark:border-slate-800 dark:bg-slate-950/60"
     >
       <TermsContactHeader />
 

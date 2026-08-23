@@ -19,7 +19,7 @@ const ThemeToggler = () => {
     <button
       title="Toggle Theme"
       onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-      className="cursor-pointer flex h-9 w-16 items-center rounded-full border border-zinc-300 bg-zinc-100 p-1 dark:border-zinc-700 dark:bg-gray-900"
+      className="flex h-9 w-16 cursor-pointer items-center rounded-full border border-zinc-300 bg-zinc-100 p-1 dark:border-zinc-700 dark:bg-gray-900"
     >
       <motion.div
         animate={{ x: resolvedTheme === "dark" ? 28 : 0 }}

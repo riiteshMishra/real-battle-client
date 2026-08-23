@@ -3,7 +3,7 @@ import Links from "./Links";
 
 const List = () => {
   return (
-    <ul className="hidden sm:flex gap-x-10 items-center select-none font-roboto font-semibold">
+    <ul className="font-roboto hidden items-center gap-x-10 font-semibold select-none sm:flex">
       {navLinks.map((link) => (
         <Links key={link.id} title={link.title} href={link.href} />
       ))}

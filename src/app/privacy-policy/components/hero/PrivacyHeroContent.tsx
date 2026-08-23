@@ -3,30 +3,11 @@ import { privacyData } from "@/src/content/privacy/privacy-index";
 const PrivacyHeroContent = () => {
   return (
     <>
-      <h1
-        className="
-          text-4xl
-          font-bold
-          tracking-tight
-          sm:text-5xl
-          md:text-6xl
-        "
-      >
+      <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
         {privacyData.title}
       </h1>
 
-      <p
-        className="
-          mt-5
-          max-w-2xl
-          text-base
-          leading-7
-          text-blue-100
-          sm:text-lg
-          md:text-xl
-          dark:text-slate-300
-        "
-      >
+      <p className="mt-5 max-w-2xl text-base leading-7 text-blue-100 sm:text-lg md:text-xl dark:text-slate-300">
         Learn how{" "}
         <strong className="font-semibold text-white">Real Battle</strong>{" "}
         collects, uses, stores, and protects your{" "}

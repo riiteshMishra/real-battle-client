@@ -9,7 +9,7 @@ const HeroImg = () => {
         alt="Real Battle"
         priority
         sizes="(max-width: 768px) 90vw, 50vw"
-        className="pointer-events-none mx-auto w-full select-none rounded-2xl object-cover transition-transform duration-300 group-hover:scale-[0.98]"
+        className="pointer-events-none mx-auto w-full rounded-2xl object-cover transition-transform duration-300 select-none group-hover:scale-[0.98]"
       />
     </div>
   );

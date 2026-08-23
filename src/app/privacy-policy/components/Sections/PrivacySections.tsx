@@ -18,10 +18,7 @@ const PrivacySections = () => {
       <div className="mb-6">
         <h2
           id="privacy-sections-title"
-          className="
-            text-2xl font-bold tracking-tight
-            text-slate-900 dark:text-white
-          "
+          className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white"
         >
           Privacy Policy Details
         </h2>
@@ -38,40 +35,13 @@ const PrivacySections = () => {
             key={section.id}
             value={section.id}
             id={section.id}
-            className="
-              overflow-hidden rounded-xl border
-              border-slate-200 bg-white
-              px-5 md:px-6
-              shadow-sm
-              dark:border-slate-800
-              dark:bg-slate-900/80
-              dark:shadow-none
-            "
+            className="overflow-hidden rounded-xl border border-slate-200 bg-white px-5 shadow-sm md:px-6 dark:border-slate-800 dark:bg-slate-900/80 dark:shadow-none"
           >
-            <AccordionTrigger
-              className="
-                py-5 text-left text-base font-semibold
-                text-slate-900
-                hover:no-underline
-                hover:text-blue-600
-                dark:text-slate-100
-                dark:hover:text-blue-400
-                data-[state=open]:text-blue-600
-                dark:data-[state=open]:text-blue-400
-              "
-            >
+            <AccordionTrigger className="py-5 text-left text-base font-semibold text-slate-900 hover:text-blue-600 hover:no-underline data-[state=open]:text-blue-600 dark:text-slate-100 dark:hover:text-blue-400 dark:data-[state=open]:text-blue-400">
               {section.title}
             </AccordionTrigger>
 
-            <AccordionContent
-              className="
-                border-t border-slate-100
-                pt-5 pb-5
-                text-slate-700
-                dark:border-slate-800
-                dark:text-slate-300
-              "
-            >
+            <AccordionContent className="border-t border-slate-100 pt-5 pb-5 text-slate-700 dark:border-slate-800 dark:text-slate-300">
               {section.type === "paragraphs" && (
                 <ParagraphSection section={section} />
               )}

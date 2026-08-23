@@ -54,17 +54,7 @@ const LoginForm = () => {
   };
 
   return (
-    <div
-      className="
-        w-full max-w-md
-        rounded-2xl
-        border border-accent dark:border-white/20
-        bg-[#d1dce9] dark:bg-[#11213e]
-        px-5 py-8
-        sm:px-8 sm:py-10
-        shadow-sm
-      "
-    >
+    <div className="border-accent w-full max-w-md rounded-2xl border bg-[#d1dce9] px-5 py-8 shadow-sm sm:px-8 sm:py-10 dark:border-white/20 dark:bg-[#11213e]">
       {/* CONTENT */}
       <div className="flex flex-col items-center gap-6">
         {/* GOOGLE LOGIN */}
@@ -73,13 +63,13 @@ const LoginForm = () => {
 
         {/* DIVIDER */}
         <div className="flex w-full items-center gap-3">
-          <div className="h-px flex-1 bg-foreground/10" />
+          <div className="bg-foreground/10 h-px flex-1" />
 
-          <span className="shrink-0 text-xs font-medium text-muted-foreground">
+          <span className="text-muted-foreground shrink-0 text-xs font-medium">
             OR
           </span>
 
-          <div className="h-px flex-1 bg-foreground/10" />
+          <div className="bg-foreground/10 h-px flex-1" />
         </div>
 
         {/* LOGIN FORM */}
@@ -123,12 +113,7 @@ const LoginForm = () => {
           <div className="-mt-2 flex justify-end">
             <button
               type="button"
-              className="
-                text-sm
-                text-muted-foreground
-                transition-colors
-                hover:text-foreground
-              "
+              className="text-muted-foreground hover:text-foreground text-sm transition-colors"
             >
               Forgot password?
             </button>
@@ -149,12 +134,12 @@ const LoginForm = () => {
         {!isLoading ? (
           <Link
             href="/auth/register"
-            className="text-sm font-medium text-primary hover:underline"
+            className="text-primary text-sm font-medium hover:underline"
           >
             Don&apos;t have an account? Register
           </Link>
         ) : (
-          <span className="cursor-not-allowed text-sm font-medium text-muted-foreground">
+          <span className="text-muted-foreground cursor-not-allowed text-sm font-medium">
             Don&apos;t have an account? Register
           </span>
         )}

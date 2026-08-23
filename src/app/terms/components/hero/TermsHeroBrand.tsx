@@ -3,16 +3,7 @@ import { FileText } from "lucide-react";
 const TermsHeroBrand = () => {
   return (
     <div className="mb-5 flex items-center gap-3">
-      <div
-        className="
-          flex h-10 w-10 shrink-0
-          items-center justify-center
-          rounded-lg
-          border border-white/20
-          bg-white/10
-          backdrop-blur-sm
-        "
-      >
+      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-white/20 bg-white/10 backdrop-blur-sm">
         <FileText aria-hidden="true" className="h-5 w-5 text-cyan-200" />
       </div>
 

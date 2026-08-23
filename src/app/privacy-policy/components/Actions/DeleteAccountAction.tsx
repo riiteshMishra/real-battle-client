@@ -11,22 +11,7 @@ const DeleteAccountAction = () => {
       type="button"
       onClick={handleDeleteAccount}
       variant="outline"
-      className="
-        h-auto min-h-16
-        justify-start gap-3
-        border-red-200
-        bg-white
-        px-4 py-4
-        text-left
-        text-red-700
-        hover:border-red-400
-        hover:bg-red-50
-        dark:border-red-900/70
-        dark:bg-slate-950/50
-        dark:text-red-400
-        dark:hover:border-red-800
-        dark:hover:bg-red-950/30
-      "
+      className="h-auto min-h-16 justify-start gap-3 border-red-200 bg-white px-4 py-4 text-left text-red-700 hover:border-red-400 hover:bg-red-50 dark:border-red-900/70 dark:bg-slate-950/50 dark:text-red-400 dark:hover:border-red-800 dark:hover:bg-red-950/30"
     >
       <Trash2 aria-hidden="true" className="h-5 w-5 shrink-0" />
 

@@ -9,55 +9,55 @@ interface LeftSideProps {
 
 const Aside = ({ heading, description }: LeftSideProps) => {
   return (
-    <section className="flex flex-col justify-center items-start gap-8 p-12 rounded-2xl font-roboto max-w-2xl">
+    <section className="font-roboto flex max-w-2xl flex-col items-start justify-center gap-8 rounded-2xl p-12">
       {/*  LOGO/BRANDING */}
       <div className="flex items-center gap-2">
-        <Trophy className="w-8 h-8 text-primary" />
-        <span className="text-xl font-bold text-foreground">Realbattle</span>
+        <Trophy className="text-primary h-8 w-8" />
+        <span className="text-foreground text-xl font-bold">Realbattle</span>
       </div>
 
       {/*  MAIN HEADING */}
       <div>
-        <h1 className="text-4xl tracking-tight font-bold text-foreground mb-4 font-sekuya bg-transparent">
+        <h1 className="text-foreground font-sekuya mb-4 bg-transparent text-4xl font-bold tracking-tight">
           {heading}
         </h1>
-        <p className="text-lg text-muted-foreground max-w-md font-roboto capitalize">
+        <p className="text-muted-foreground font-roboto max-w-md text-lg capitalize">
           {description}
         </p>
       </div>
 
       {/* KEY FEATURES */}
-      <div className="space-y-4 mt-8">
+      <div className="mt-8 space-y-4">
         <FeatureItem
-          icon={<Zap className="w-5 h-5" />}
+          icon={<Zap className="h-5 w-5" />}
           title="Instant Tournaments"
           text="Create and join tournaments in seconds"
         />
         <FeatureItem
-          icon={<Users className="w-5 h-5" />}
+          icon={<Users className="h-5 w-5" />}
           title="Pro Players"
           text="Compete with top gaming professionals"
         />
         <FeatureItem
-          icon={<Trophy className="w-5 h-5" />}
+          icon={<Trophy className="h-5 w-5" />}
           title="Real Prizes"
           text="Win cash prizes and exclusive rewards"
         />
       </div>
 
       {/* STATS/SOCIAL PROOF */}
-      <div className="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-border">
+      <div className="border-border mt-12 grid grid-cols-3 gap-6 border-t pt-8">
         <div>
-          <p className="text-2xl font-bold text-primary">50K+</p>
-          <p className="text-sm text-muted-foreground">Active Players</p>
+          <p className="text-primary text-2xl font-bold">50K+</p>
+          <p className="text-muted-foreground text-sm">Active Players</p>
         </div>
         <div>
-          <p className="text-2xl font-bold text-primary">₹1Cr+</p>
-          <p className="text-sm text-muted-foreground">Prize Pool</p>
+          <p className="text-primary text-2xl font-bold">₹1Cr+</p>
+          <p className="text-muted-foreground text-sm">Prize Pool</p>
         </div>
         <div>
-          <p className="text-2xl font-bold text-primary">1000+</p>
-          <p className="text-sm text-muted-foreground">Daily Matches</p>
+          <p className="text-primary text-2xl font-bold">1000+</p>
+          <p className="text-muted-foreground text-sm">Daily Matches</p>
         </div>
       </div>
     </section>
@@ -75,8 +75,8 @@ const FeatureItem = ({ icon, title, text }: FeatureItemProps) => (
   <div className="flex items-start gap-3">
     <div className="text-primary mt-1">{icon}</div>
     <div>
-      <h3 className="font-semibold text-foreground">{title}</h3>
-      <p className="text-sm text-muted-foreground">{text}</p>
+      <h3 className="text-foreground font-semibold">{title}</h3>
+      <p className="text-muted-foreground text-sm">{text}</p>
     </div>
   </div>
 );

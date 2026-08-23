@@ -51,17 +51,17 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="rounded-2xl border border-foreground/10 bg-foreground/3 p-6 backdrop-blur-xl lg:col-span-3"
+      className="border-foreground/10 bg-foreground/3 rounded-2xl border p-6 backdrop-blur-xl lg:col-span-3"
     >
       {/* Status Messages */}
       {status.type === "success" && (
-        <div className="mb-5 rounded-lg bg-green-500/10 border border-green-500/30 p-3 text-sm text-green-300">
+        <div className="mb-5 rounded-lg border border-green-500/30 bg-green-500/10 p-3 text-sm text-green-300">
           ✓ {status.message}
         </div>
       )}
 
       {status.type === "error" && (
-        <div className="mb-5 rounded-lg bg-red-500/10 border border-red-500/30 p-3 text-sm text-red-300">
+        <div className="mb-5 rounded-lg border border-red-500/30 bg-red-500/10 p-3 text-sm text-red-300">
           ✗ {status.message}
         </div>
       )}
@@ -112,7 +112,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="mt-5 w-full rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
+        className="bg-primary mt-5 w-full rounded-xl px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
       >
         {isSubmitting ? (
           <span className="flex items-center justify-center gap-2">

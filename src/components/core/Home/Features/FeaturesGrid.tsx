@@ -3,7 +3,7 @@ import Card from "./Card";
 
 const FeaturesGrid = () => {
   return (
-    <div className="flex flex-col px-8 sm:grid grid-cols-3 gap-8 max-w-5xl mx-auto py-10">
+    <div className="mx-auto flex max-w-5xl grid-cols-3 flex-col gap-8 px-8 py-10 sm:grid">
       {featuresData.map((data) => {
         const fullWidth =
           data.title.startsWith("Live") || data.title.startsWith("Multiple");

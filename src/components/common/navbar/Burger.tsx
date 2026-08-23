@@ -9,7 +9,7 @@ const Burger = () => {
     <button
       onClick={() => setOpen((prev) => !prev)}
       aria-label="Open menu"
-      className="flex h-10 w-10 items-center justify-center rounded-lg transition-colors hover:bg-black/5 dark:hover:bg-white/10 md:hidden"
+      className="flex h-10 w-10 items-center justify-center rounded-lg transition-colors hover:bg-black/5 md:hidden dark:hover:bg-white/10"
     >
       <Menu size={24} />
     </button>

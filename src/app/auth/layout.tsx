@@ -7,7 +7,7 @@ export default function AuthLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-background px-4 py-6 text-foreground">
+    <div className="bg-background text-foreground relative flex min-h-screen items-center justify-center overflow-hidden px-4 py-6">
       <BGlow />
       <AuthCard>{children}</AuthCard>
     </div>

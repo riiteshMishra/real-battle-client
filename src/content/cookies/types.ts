@@ -1,8 +1,5 @@
 export type CookieSectionType =
-  | "paragraphs"
-  | "list"
-  | "subsections"
-  | "contact";
+  "paragraphs" | "list" | "subsections" | "contact";
 
 export interface CookieSection {
   id: string;

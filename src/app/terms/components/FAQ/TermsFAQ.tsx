@@ -7,15 +7,7 @@ const TermsFAQ = () => {
   return (
     <section
       aria-labelledby="terms-faq-title"
-      className="
-        mb-12
-        rounded-xl
-        border border-slate-200
-        bg-slate-50/80
-        p-6 md:p-8
-        dark:border-slate-800
-        dark:bg-slate-900/60
-      "
+      className="mb-12 rounded-xl border border-slate-200 bg-slate-50/80 p-6 md:p-8 dark:border-slate-800 dark:bg-slate-900/60"
     >
       <TermsFAQHeader />
 

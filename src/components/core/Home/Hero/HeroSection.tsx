@@ -6,12 +6,12 @@ import HeroImg from "./HeroImg";
 
 const HeroSection = () => {
   return (
-    <section id="home" className=" py-15 md:py-20 px-4">
+    <section id="home" className="px-4 py-15 md:py-20">
       <Heading />
-      <div className="max-w-40 bg-primary h-0.5 mx-auto rounded-ful my-10" />
+      <div className="bg-primary rounded-ful mx-auto my-10 h-0.5 max-w-40" />
       <SubHeading
         title={homeData.subHeading}
-        className="text-center font-bricolage font-medium capitalize text-sm sm:text max-w-95 mx-auto"
+        className="font-bricolage sm:text mx-auto max-w-95 text-center text-sm font-medium capitalize"
       />
       <Steps />
       <HeroImg />

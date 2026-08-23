@@ -70,28 +70,18 @@ const RegisterForm = () => {
   };
 
   return (
-    <div
-      className="
-        w-full max-w-md
-        rounded-2xl
-        border border-accent dark:border-white/20
-        bg-[#d1dce9] dark:bg-[#11213e]
-        px-5 py-8
-        sm:px-8 sm:py-10
-        shadow-sm
-      "
-    >
+    <div className="border-accent w-full max-w-md rounded-2xl border bg-[#d1dce9] px-5 py-8 shadow-sm sm:px-8 sm:py-10 dark:border-white/20 dark:bg-[#11213e]">
       {/* CONTENT */}
       <div className="flex flex-col items-center gap-6">
         <GoogleLogin />
 
         {/* DIVIDER */}
         <div className="flex w-full items-center gap-3">
-          <div className="h-px flex-1 bg-foreground/10" />
-          <span className="shrink-0 text-xs font-medium text-muted-foreground">
+          <div className="bg-foreground/10 h-px flex-1" />
+          <span className="text-muted-foreground shrink-0 text-xs font-medium">
             OR
           </span>
-          <div className="h-px flex-1 bg-foreground/10" />
+          <div className="bg-foreground/10 h-px flex-1" />
         </div>
 
         {/* REGISTRATION FORM */}
@@ -177,17 +167,17 @@ const RegisterForm = () => {
 
         {/* LOGIN PAGE */}
         {!isLoading ? (
-          <p className="text-sm text-muted-foreground">
+          <p className="text-muted-foreground text-sm">
             Already have an account?{" "}
             <Link
               href="/auth/login"
-              className="font-medium text-primary hover:underline"
+              className="text-primary font-medium hover:underline"
             >
               Login
             </Link>
           </p>
         ) : (
-          <span className="text-sm text-muted-foreground">
+          <span className="text-muted-foreground text-sm">
             Already have an account? Login
           </span>
         )}

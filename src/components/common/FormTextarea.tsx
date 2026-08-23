@@ -29,11 +29,11 @@ export const FormTextarea: React.FC<FormTextareaProps> = ({
         rows={rows}
         disabled={disabled}
         {...register}
-        className={`w-full resize-none rounded-xl border px-4 py-3 text-sm outline-none transition ${
+        className={`w-full resize-none rounded-xl border px-4 py-3 text-sm transition outline-none ${
           error
             ? "border-red-500/50 bg-red-500/5 focus:border-red-500"
             : "border-foreground/10 bg-background focus:border-primary"
-        } disabled:opacity-50 disabled:cursor-not-allowed`}
+        } disabled:cursor-not-allowed disabled:opacity-50`}
       />
       {error && <p className="mt-1 text-xs text-red-500">{error}</p>}
     </div>

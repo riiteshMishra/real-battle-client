@@ -12,7 +12,7 @@ const SupportedGames = () => {
         className="mx-auto my-10 max-w-100 text-center text-sm capitalize"
       />
 
-      <div className="mx-auto h-0.5 w-40 rounded-full bg-primary" />
+      <div className="bg-primary mx-auto h-0.5 w-40 rounded-full" />
 
       <Cards />
     </section>

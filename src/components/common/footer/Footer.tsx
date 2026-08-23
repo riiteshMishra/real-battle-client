@@ -7,14 +7,14 @@ import Details from "./Details";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-black border-t border-white/10">
+    <footer className="border-t border-white/10 bg-black">
       {/* Main Footer Content */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         <div className="mb-12">
           <Details />
         </div>
 
-        <div className="flex flex-wrap gap-8 mb-12 sm:justify-between justify-center">
+        <div className="mb-12 flex flex-wrap justify-center gap-8 sm:justify-between">
           {footerData.map((section) => (
             <FooterSection key={`footer-${section.title}`} section={section} />
           ))}

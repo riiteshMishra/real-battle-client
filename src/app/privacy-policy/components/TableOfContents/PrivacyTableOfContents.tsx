@@ -5,19 +5,10 @@ const PrivacyTableOfContents = () => {
   return (
     <section
       aria-labelledby="privacy-table-of-contents"
-      className="
-        mb-12 rounded-xl border p-6
-        border-slate-200 bg-slate-50
-        dark:border-slate-800 dark:bg-slate-900/60
-      "
+      className="mb-12 rounded-xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-900/60"
     >
       <div className="mb-5 flex items-center gap-3">
-        <div
-          className="
-            flex h-9 w-9 shrink-0 items-center justify-center rounded-lg
-            bg-blue-100 dark:bg-blue-950/60
-          "
-        >
+        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-blue-100 dark:bg-blue-950/60">
           <List
             aria-hidden="true"
             className="h-5 w-5 text-blue-600 dark:text-blue-400"
@@ -26,10 +17,7 @@ const PrivacyTableOfContents = () => {
 
         <h2
           id="privacy-table-of-contents"
-          className="
-            text-xl font-bold tracking-tight
-            text-slate-900 dark:text-white
-          "
+          className="text-xl font-bold tracking-tight text-slate-900 dark:text-white"
         >
           Privacy Policy Contents
         </h2>
@@ -47,25 +35,9 @@ const PrivacyTableOfContents = () => {
             <li key={section.id}>
               <a
                 href={`#${section.id}`}
-                className="
-                  group flex items-center gap-3 rounded-lg px-3 py-2.5
-                  text-sm transition-colors
-                  text-slate-600 hover:bg-white hover:text-blue-600
-                  dark:text-slate-400 dark:hover:bg-slate-800
-                  dark:hover:text-blue-400
-                "
+                className="group flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-slate-600 transition-colors hover:bg-white hover:text-blue-600 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-blue-400"
               >
-                <span
-                  className="
-                    flex h-6 w-6 shrink-0 items-center justify-center
-                    rounded-md text-xs font-medium
-                    bg-slate-200 text-slate-600
-                    group-hover:bg-blue-100 group-hover:text-blue-600
-                    dark:bg-slate-800 dark:text-slate-400
-                    dark:group-hover:bg-blue-950
-                    dark:group-hover:text-blue-400
-                  "
-                >
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-slate-200 text-xs font-medium text-slate-600 group-hover:bg-blue-100 group-hover:text-blue-600 dark:bg-slate-800 dark:text-slate-400 dark:group-hover:bg-blue-950 dark:group-hover:text-blue-400">
                   {index + 1}
                 </span>
 

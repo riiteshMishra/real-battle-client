@@ -1,8 +1,8 @@
 const Heading = () => {
   return (
-    <h3 className="text-[clamp(1.8rem,4vw,3rem)] w-80 sm:w-auto capitalize mx-auto text-center font-sekuya  font-bold max-w-5xl">
-      Why choose <br className="sm:hidden block" />
-      <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-500 via-cyan-400 to-orange-500">
+    <h3 className="font-sekuya mx-auto w-80 max-w-5xl text-center text-[clamp(1.8rem,4vw,3rem)] font-bold capitalize sm:w-auto">
+      Why choose <br className="block sm:hidden" />
+      <span className="bg-linear-to-r from-purple-500 via-cyan-400 to-orange-500 bg-clip-text text-transparent">
         <strong>Real battle?</strong>
       </span>
     </h3>

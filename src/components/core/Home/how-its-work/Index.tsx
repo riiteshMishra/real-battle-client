@@ -9,9 +9,9 @@ const HowItsWork = () => {
       <Heading />
       <SubHeading
         title={homeData.subHeadin3}
-        className="text-center capitalize text-sm sm:text max-w-100 mx-auto my-10"
+        className="sm:text mx-auto my-10 max-w-100 text-center text-sm capitalize"
       />
-      <div className="max-w-40 bg-primary h-0.5 mx-auto rounded-ful" />
+      <div className="bg-primary rounded-ful mx-auto h-0.5 max-w-40" />
       <Cards />
     </section>
   );

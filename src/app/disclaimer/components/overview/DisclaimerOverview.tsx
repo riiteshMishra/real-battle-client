@@ -38,15 +38,7 @@ const DisclaimerOverview = () => {
     <section aria-labelledby="disclaimer-overview-title" className="mb-12">
       <div className="mb-6">
         <div className="flex items-center gap-3">
-          <div
-            className="
-              flex h-10 w-10 shrink-0
-              items-center justify-center
-              rounded-lg
-              bg-orange-100
-              dark:bg-orange-950/60
-            "
-          >
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-orange-100 dark:bg-orange-950/60">
             <FileWarning
               aria-hidden="true"
               className="h-5 w-5 text-orange-600 dark:text-orange-400"
@@ -56,11 +48,7 @@ const DisclaimerOverview = () => {
           <div>
             <h2
               id="disclaimer-overview-title"
-              className="
-                text-2xl font-bold tracking-tight
-                text-slate-900
-                dark:text-slate-100
-              "
+              className="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100"
             >
               Quick Overview
             </h2>
@@ -80,18 +68,11 @@ const DisclaimerOverview = () => {
           return (
             <div
               key={section.id}
-              className={`
-                rounded-xl border p-5
-                ${getColorClasses(config.color)}
-              `}
+              className={`rounded-xl border p-5 ${getColorClasses(config.color)} `}
             >
               <div className="mb-3 flex items-center gap-3">
                 <div
-                  className={`
-                    flex h-9 w-9 items-center justify-center
-                    rounded-lg
-                    ${getIconBackground(config.color)}
-                  `}
+                  className={`flex h-9 w-9 items-center justify-center rounded-lg ${getIconBackground(config.color)} `}
                 >
                   <Icon
                     aria-hidden="true"
@@ -99,12 +80,7 @@ const DisclaimerOverview = () => {
                   />
                 </div>
 
-                <h3
-                  className={`
-                    font-semibold
-                    ${getTitleColor(config.color)}
-                  `}
-                >
+                <h3 className={`font-semibold ${getTitleColor(config.color)} `}>
                   {section.title.replace(/^\d+\.\s*/, "")}
                 </h3>
               </div>

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 // Register page
 const Page = () => {
   return (
-    <main className="mx-auto flex w-full max-w-5xl flex-col items-center justify-between gap-10 px-4 py-8 font-roboto md:flex-row md:gap-12">
+    <main className="font-roboto mx-auto flex w-full max-w-5xl flex-col items-center justify-between gap-10 px-4 py-8 md:flex-row md:gap-12">
       <Aside
         heading="Welcome, soldier"
         description="Create your account and join the battle"

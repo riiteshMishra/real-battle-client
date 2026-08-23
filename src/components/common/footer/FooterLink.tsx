@@ -14,10 +14,10 @@ const FooterLink: React.FC<FooterLinkProps> = ({ link }) => {
         href={link.href}
         target={link.href.startsWith("http") ? "_blank" : undefined}
         rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-        className="text-gray-400 hover:text-white transition-colors duration-200 text-sm flex items-center gap-2 group"
+        className="group flex items-center gap-2 text-sm text-gray-400 transition-colors duration-200 hover:text-white"
       >
         {link.icon && (
-          <link.icon className="w-4 h-4 group-hover:text-orange-500 transition-colors" />
+          <link.icon className="h-4 w-4 transition-colors group-hover:text-orange-500" />
         )}
         <span>{link.text}</span>
       </Link>

@@ -25,7 +25,7 @@ const AccountMenu = () => {
       {/* USER AVATAR BUTTON */}
       <button
         onClick={() => setShowMenu(!showMenu)}
-        className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-muted transition"
+        className="hover:bg-muted flex items-center gap-2 rounded-lg px-3 py-2 transition"
       >
         {/* AVATAR */}
         <Image
@@ -33,28 +33,28 @@ const AccountMenu = () => {
           alt={currentUser.name ?? "user-avatar"}
           width={32}
           height={32}
-          className=" rounded-full"
+          className="rounded-full"
           unoptimized
         />
         {/* NAME (HIDDEN ON MOBILE) */}
-        <span className="hidden sm:inline text-sm font-medium">
+        <span className="hidden text-sm font-medium sm:inline">
           {currentUser.name}
         </span>
       </button>
 
       {/* DROPDOWN MENU */}
       {showMenu && (
-        <div className="absolute right-0 mt-2 w-48 bg-background border border-border rounded-lg shadow-lg py-2 z-50">
+        <div className="bg-background border-border absolute right-0 z-50 mt-2 w-48 rounded-lg border py-2 shadow-lg">
           {/* USER INFO */}
-          <div className="px-4 py-2 border-b border-border">
+          <div className="border-border border-b px-4 py-2">
             <p className="text-sm font-medium">{currentUser.name}</p>
-            <p className="text-xs text-muted-foreground">{currentUser.email}</p>
+            <p className="text-muted-foreground text-xs">{currentUser.email}</p>
           </div>
 
           {/* MENU ITEMS */}
           <Link
             href="/profile"
-            className="block px-4 py-2 text-sm hover:bg-muted transition"
+            className="hover:bg-muted block px-4 py-2 text-sm transition"
             onClick={() => setShowMenu(false)}
           >
             Profile
@@ -62,7 +62,7 @@ const AccountMenu = () => {
 
           <Link
             href="/dashboard"
-            className="block px-4 py-2 text-sm hover:bg-muted transition"
+            className="hover:bg-muted block px-4 py-2 text-sm transition"
             onClick={() => setShowMenu(false)}
           >
             Dashboard

@@ -9,11 +9,11 @@ interface FooterSectionProps {
 
 const FooterSection: React.FC<FooterSectionProps> = ({ section }) => {
   return (
-    <div className=" min-w-80 sm:min-w-60 flex flex-col items-center py-4 ">
-      <h3 className="text-white font-semibold text-lg uppercase tracking-widest mb-5">
+    <div className="flex min-w-80 flex-col items-center py-4 sm:min-w-60">
+      <h3 className="mb-5 text-lg font-semibold tracking-widest text-white uppercase">
         {section.title}
       </h3>
-      <ul className="flex flex-col items-center sm:items-start gap-y-4">
+      <ul className="flex flex-col items-center gap-y-4 sm:items-start">
         {section.links.map((link) => (
           <FooterLink key={link.id} link={link} />
         ))}

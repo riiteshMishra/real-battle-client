@@ -7,40 +7,18 @@ const TermsOverview = () => {
       <div className="mb-6">
         <h2
           id="terms-overview-title"
-          className="
-            text-2xl
-            font-bold
-            tracking-tight
-            text-slate-900
-            dark:text-slate-100
-          "
+          className="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100"
         >
           Quick Overview
         </h2>
 
-        <p
-          className="
-            mt-2
-            text-sm
-            leading-6
-            text-slate-600
-            dark:text-slate-400
-          "
-        >
+        <p className="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
           These Terms explain the rules and responsibilities that apply when you
           use Real Battle or participate in our gaming tournaments.
         </p>
       </div>
 
-      <div
-        className="
-          grid
-          grid-cols-1
-          gap-4
-          sm:grid-cols-2
-          lg:grid-cols-3
-        "
-      >
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {termsOverviewData.map((item) => (
           <TermsOverviewCard
             key={item.id}

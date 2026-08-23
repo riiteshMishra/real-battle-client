@@ -9,21 +9,7 @@ import Footer from "@/src/components/common/footer/Footer";
 
 const TermsPage = () => {
   return (
-    <div
-      className="
-        min-h-screen
-        bg-slate-50
-        text-slate-900
-
-        dark:bg-slate-950
-        dark:text-slate-100
-
-        bg-[radial-gradient(circle,rgba(59,130,246,0.14)_1px,transparent_1px)]
-        dark:bg-[radial-gradient(circle,rgba(96,165,250,0.10)_1px,transparent_1px)]
-
-        bg-size-[24px_24px]
-      "
-    >
+    <div className="min-h-screen bg-slate-50 bg-[radial-gradient(circle,rgba(59,130,246,0.14)_1px,transparent_1px)] bg-size-[24px_24px] text-slate-900 dark:bg-slate-950 dark:bg-[radial-gradient(circle,rgba(96,165,250,0.10)_1px,transparent_1px)] dark:text-slate-100">
       <TermsHero />
 
       <main id="main-content" className="mx-auto max-w-4xl px-4 py-12 md:py-16">

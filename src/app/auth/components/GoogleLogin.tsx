@@ -49,7 +49,7 @@ const GoogleLogin = () => {
       disabled={isLoading}
       onClick={clickHandler}
       type="button"
-      className="flex w-full items-center justify-center gap-3 rounded-xl border border-border bg-background px-4 py-3 text-xs font-medium text-foreground transition hover:bg-muted active:scale-[0.98] cursor-pointer max-w-60"
+      className="border-border bg-background text-foreground hover:bg-muted flex w-full max-w-60 cursor-pointer items-center justify-center gap-3 rounded-xl border px-4 py-3 text-xs font-medium transition active:scale-[0.98]"
     >
       {/* GOOGLE ICON */}
       <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">

@@ -25,15 +25,7 @@ const PrivacyOverview = () => {
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         {/* What We Collect */}
-        <article
-          className="
-            rounded-xl border border-blue-200 bg-blue-50 p-6
-            transition-colors
-            hover:border-blue-300
-            dark:border-blue-900/50 dark:bg-blue-950/30
-            dark:hover:border-blue-800
-          "
-        >
+        <article className="rounded-xl border border-blue-200 bg-blue-50 p-6 transition-colors hover:border-blue-300 dark:border-blue-900/50 dark:bg-blue-950/30 dark:hover:border-blue-800">
           <div className="mb-3 flex items-center gap-3">
             <CheckCircle2
               aria-hidden="true"
@@ -58,15 +50,7 @@ const PrivacyOverview = () => {
         </article>
 
         {/* Why We Collect */}
-        <article
-          className="
-            rounded-xl border border-green-200 bg-green-50 p-6
-            transition-colors
-            hover:border-green-300
-            dark:border-green-900/50 dark:bg-green-950/30
-            dark:hover:border-green-800
-          "
-        >
+        <article className="rounded-xl border border-green-200 bg-green-50 p-6 transition-colors hover:border-green-300 dark:border-green-900/50 dark:bg-green-950/30 dark:hover:border-green-800">
           <div className="mb-3 flex items-center gap-3">
             <ShieldCheck
               aria-hidden="true"
@@ -88,15 +72,7 @@ const PrivacyOverview = () => {
         </article>
 
         {/* Who We Share With */}
-        <article
-          className="
-            rounded-xl border border-orange-200 bg-orange-50 p-6
-            transition-colors
-            hover:border-orange-300
-            dark:border-orange-900/50 dark:bg-orange-950/30
-            dark:hover:border-orange-800
-          "
-        >
+        <article className="rounded-xl border border-orange-200 bg-orange-50 p-6 transition-colors hover:border-orange-300 dark:border-orange-900/50 dark:bg-orange-950/30 dark:hover:border-orange-800">
           <div className="mb-3 flex items-center gap-3">
             <Share2
               aria-hidden="true"
@@ -117,15 +93,7 @@ const PrivacyOverview = () => {
         </article>
 
         {/* Your Rights */}
-        <article
-          className="
-            rounded-xl border border-purple-200 bg-purple-50 p-6
-            transition-colors
-            hover:border-purple-300
-            dark:border-purple-900/50 dark:bg-purple-950/30
-            dark:hover:border-purple-800
-          "
-        >
+        <article className="rounded-xl border border-purple-200 bg-purple-50 p-6 transition-colors hover:border-purple-300 dark:border-purple-900/50 dark:bg-purple-950/30 dark:hover:border-purple-800">
           <div className="mb-3 flex items-center gap-3">
             <UserRoundCheck
               aria-hidden="true"

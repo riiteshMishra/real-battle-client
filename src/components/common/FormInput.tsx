@@ -31,7 +31,7 @@ export const FormInput: React.FC<FormInputProps> = ({
   return (
     <div className={`w-full ${containerClassName}`}>
       <label
-        className={`mb-2 block text-sm font-medium text-foreground ${labelClassName}`}
+        className={`text-foreground mb-2 block text-sm font-medium ${labelClassName}`}
       >
         {label}
         <span className="ml-1 text-red-500">*</span>
@@ -42,19 +42,11 @@ export const FormInput: React.FC<FormInputProps> = ({
         placeholder={placeholder}
         disabled={disabled}
         {...register}
-        className={`
-          w-full rounded-xl border px-4 py-3
-          text-sm text-foreground
-          outline-none transition-all duration-200
-          placeholder:text-muted-foreground
-          disabled:cursor-not-allowed disabled:opacity-50
-          ${
-            error
-              ? "border-red-500/50 bg-red-500/5 focus:border-red-500 focus:ring-2 focus:ring-red-500/10"
-              : "border-border bg-background hover:border-foreground/20 focus:border-primary focus:ring-2 focus:ring-primary/10"
-          }
-          ${inputClassName}
-        `}
+        className={`text-foreground placeholder:text-muted-foreground w-full rounded-xl border px-4 py-3 text-sm transition-all duration-200 outline-none disabled:cursor-not-allowed disabled:opacity-50 ${
+          error
+            ? "border-red-500/50 bg-red-500/5 focus:border-red-500 focus:ring-2 focus:ring-red-500/10"
+            : "border-border bg-background hover:border-foreground/20 focus:border-primary focus:ring-primary/10 focus:ring-2"
+        } ${inputClassName} `}
       />
 
       {error && (

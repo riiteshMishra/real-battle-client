@@ -1,8 +1,5 @@
 export type DisclaimerSectionType =
-  | "paragraphs"
-  | "list"
-  | "subsections"
-  | "contact";
+  "paragraphs" | "list" | "subsections" | "contact";
 
 export interface DisclaimerSection {
   id: string;

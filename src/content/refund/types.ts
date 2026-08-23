@@ -1,8 +1,5 @@
 export type RefundSectionType =
-  | "paragraphs"
-  | "list"
-  | "subsections"
-  | "contact";
+  "paragraphs" | "list" | "subsections" | "contact";
 
 export interface RefundSubsection {
   id: string;

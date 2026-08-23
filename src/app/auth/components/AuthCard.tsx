@@ -4,7 +4,7 @@ interface AuthCardProps {
 
 const AuthCard = ({ children }: AuthCardProps) => {
   return (
-    <div className="w-full max-w-6xl rounded-lg border border-border bg-card p-6 shadow-lg">
+    <div className="border-border bg-card w-full max-w-6xl rounded-lg border p-6 shadow-lg">
       {children}
     </div>
   );

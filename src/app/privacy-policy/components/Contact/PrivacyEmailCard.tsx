@@ -29,47 +29,18 @@ const PrivacyEmailCard = ({
   return (
     <a
       href={`mailto:${email}`}
-      className={`
-        group
-        rounded-lg
-        border
-        border-slate-200
-        bg-white
-        p-5
-        transition-all
-        duration-200
-        hover:bg-slate-50
-        dark:border-slate-800
-        dark:bg-slate-900/70
-        dark:hover:bg-slate-900
-        ${color.border}
-      `}
+      className={`group rounded-lg border border-slate-200 bg-white p-5 transition-all duration-200 hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900/70 dark:hover:bg-slate-900 ${color.border} `}
     >
       <div className="mb-2 flex items-center gap-3">
         <Mail aria-hidden="true" className={`h-5 w-5 ${color.icon}`} />
 
-        <span
-          className="
-            text-sm
-            text-slate-500
-            dark:text-slate-400
-          "
-        >
+        <span className="text-sm text-slate-500 dark:text-slate-400">
           {label}
         </span>
       </div>
 
       <span
-        className={`
-          block
-          break-all
-          font-semibold
-          text-slate-900
-          transition-colors
-          duration-200
-          dark:text-slate-100
-          ${color.hover}
-        `}
+        className={`block font-semibold break-all text-slate-900 transition-colors duration-200 dark:text-slate-100 ${color.hover} `}
       >
         {email}
       </span>

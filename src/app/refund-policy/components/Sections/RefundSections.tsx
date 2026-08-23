@@ -25,43 +25,13 @@ const RefundSections = () => {
             key={section.id}
             value={section.id}
             id={section.id}
-            className="
-              overflow-hidden
-              rounded-xl
-              border border-slate-200
-              bg-white
-              px-6
-              shadow-sm
-              transition-colors
-              dark:border-slate-800
-              dark:bg-slate-950/60
-            "
+            className="overflow-hidden rounded-xl border border-slate-200 bg-white px-6 shadow-sm transition-colors dark:border-slate-800 dark:bg-slate-950/60"
           >
-            <AccordionTrigger
-              className="
-                py-5
-                text-left
-                text-base
-                font-semibold
-                tracking-tight
-                text-slate-900
-                hover:no-underline
-                hover:text-blue-600
-                md:text-lg
-                dark:text-slate-100
-                dark:hover:text-blue-400
-              "
-            >
+            <AccordionTrigger className="py-5 text-left text-base font-semibold tracking-tight text-slate-900 hover:text-blue-600 hover:no-underline md:text-lg dark:text-slate-100 dark:hover:text-blue-400">
               {section.title}
             </AccordionTrigger>
 
-            <AccordionContent
-              className="
-                pb-6
-                text-slate-700
-                dark:text-slate-300
-              "
-            >
+            <AccordionContent className="pb-6 text-slate-700 dark:text-slate-300">
               {section.type === "paragraphs" && (
                 <ParagraphSection section={section} />
               )}
