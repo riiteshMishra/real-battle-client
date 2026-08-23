@@ -16,21 +16,11 @@ interface ContactSectionProps {
   note?: string;
 }
 
-const ContactSection = ({ title, description, note }: ContactSectionProps) => {
+const ContactSection = ({ title, description }: ContactSectionProps) => {
   return (
     <section
       aria-labelledby="contact-title"
-      className="
-        mb-12
-        rounded-xl
-        border
-        border-slate-200
-        bg-white
-        p-6
-        md:p-8
-        dark:border-slate-800
-        dark:bg-slate-950/60
-      "
+      className="mb-12 rounded-xl border border-slate-200 bg-white p-6 md:p-8 dark:border-slate-800 dark:bg-slate-950/60"
     >
       <ContactHeader title={title} description={description} />
       <ContactForm />
