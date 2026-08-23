@@ -1,23 +1,39 @@
 "use client";
+
 import { Download } from "lucide-react";
 import { Button } from "@/src/components/common/button";
 
-const DownloadButton = () => {
+interface DownloadButtonProps {
+  fileName: string;
+  content: string;
+  title: string;
+  subtitle: string;
+}
+
+const DownloadButton = ({
+  fileName,
+  content,
+  title,
+  subtitle,
+}: DownloadButtonProps) => {
   const handleDownload = () => {
-    const termsContent = `
-Real Battle - Terms of Service
-Last Updated: August 21, 2026
+    const file = new Blob([content], {
+      type: "text/plain;charset=utf-8",
+    });
 
-[Full terms content here...]
-    `.trim();
+    const url = URL.createObjectURL(file);
 
-    const element = document.createElement("a");
-    const file = new Blob([termsContent], { type: "text/plain" });
-    element.href = URL.createObjectURL(file);
-    element.download = "Real-Battle-Terms-of-Service.txt";
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
+    const link = document.createElement("a");
+
+    link.href = url;
+    link.download = fileName;
+
+    document.body.appendChild(link);
+    link.click();
+
+    document.body.removeChild(link);
+
+    URL.revokeObjectURL(url);
   };
 
   return (
@@ -34,11 +50,11 @@ Last Updated: August 21, 2026
 
       <span>
         <span className="block font-semibold text-slate-900 dark:text-slate-100">
-          Download Terms
+          {title}
         </span>
 
         <span className="mt-1 block text-xs font-normal text-slate-500 dark:text-slate-400">
-          Save a copy for your records
+          {subtitle}
         </span>
       </span>
     </Button>

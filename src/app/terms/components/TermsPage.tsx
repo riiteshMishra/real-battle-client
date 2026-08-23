@@ -1,4 +1,3 @@
-import TermsActions from "./Actions/TermsActions";
 import TermsContact from "./Contact/TermsContact";
 import Footer from "@/src/components/common/footer/Footer";
 import TermHero from "./TermHero";
@@ -8,6 +7,7 @@ import SectionTemplate from "@/src/components/ui/doc/section/SectionTemplate";
 import { termsData } from "@/src/content/terms/terms-index";
 import FaqSection from "@/src/components/ui/doc/faq/FaqSection";
 import { termsFAQItems } from "./termsFAQItems";
+import ActionsSec from "@/src/components/ui/doc/actions/ActionsSec";
 
 const TermsPage = () => {
   return (
@@ -25,7 +25,13 @@ const TermsPage = () => {
           title="Terms of Service Sections"
           sections={termsData.sections}
         />
-        <TermsActions />
+        <ActionsSec
+          title="Terms & Documents"
+          description="Save a copy of these Terms or contact us if you have questions about our rules and conditions."
+          email="realbattleofficial@gmail.com"
+          contactTitle="Contact Support"
+          contactSubtitle="Questions about these Terms"
+        />
         <TermsContact />
       </main>
 
