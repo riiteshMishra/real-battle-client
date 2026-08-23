@@ -21,7 +21,6 @@ import { liabilitySection } from "./sections/liability";
 import { indemnificationSection } from "./sections/indemnification";
 import { changesSection } from "./sections/changes";
 import { governingLawSection } from "./sections/governing-law";
-import { contactSection } from "./sections/contact";
 import { TermsSection } from "./types";
 
 export const termsData: {
@@ -60,6 +59,5 @@ export const termsData: {
     indemnificationSection,
     changesSection,
     governingLawSection,
-    contactSection,
   ],
 };
