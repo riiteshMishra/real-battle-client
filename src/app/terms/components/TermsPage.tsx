@@ -1,4 +1,3 @@
-import TermsFAQ from "./FAQ/TermsFAQ";
 import TermsActions from "./Actions/TermsActions";
 import TermsContact from "./Contact/TermsContact";
 import Footer from "@/src/components/common/footer/Footer";
@@ -7,6 +6,8 @@ import TermHero from "./TermHero";
 import TermOverview from "./TermOverview";
 import SectionTemplate from "@/src/components/ui/doc/section/SectionTemplate";
 import { termsData } from "@/src/content/terms/terms-index";
+import FaqSection from "@/src/components/ui/doc/faq/FaqSection";
+import { termsFAQItems } from "./termsFAQItems";
 
 const TermsPage = () => {
   return (
@@ -15,7 +16,11 @@ const TermsPage = () => {
 
       <main id="main-content" className="mx-auto max-w-4xl px-4 py-12 md:py-16">
         <TermOverview />
-        <TermsFAQ />
+        <FaqSection
+          title="Frequently Asked Questions"
+          description="Answers to common questions about the Real Battle Terms of Service."
+          items={termsFAQItems}
+        />
         <SectionTemplate
           title="Terms of Service Sections"
           sections={termsData.sections}
