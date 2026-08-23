@@ -112,7 +112,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="bg-primary mt-5 w-full rounded-xl px-5 py-3 text-sm font-semibold text-white transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
+        className="bg-primary mt-5 w-full rounded-xl px-5 py-3 text-sm font-semibold text-white dark:text-black transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer"
       >
         {isSubmitting ? (
           <span className="flex items-center justify-center gap-2">
