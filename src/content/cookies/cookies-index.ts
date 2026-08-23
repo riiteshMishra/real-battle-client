@@ -38,6 +38,5 @@ export const cookiesData: {
     manageCookiesSection,
     disabledCookiesSection,
     changesSection,
-    contactSection,
   ],
 };

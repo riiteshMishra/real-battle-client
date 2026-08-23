@@ -21,5 +21,5 @@ export interface OverviewItem {
 export interface OverviewProps {
   title: string;
   description: string;
-  items: OverviewItem[];
+  items: readonly OverviewItem[];
 }

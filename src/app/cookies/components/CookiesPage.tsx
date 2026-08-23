@@ -1,8 +1,9 @@
 import CookiesHero from "./hero/CookiesHero";
 import CookiesOverview from "./overview/CookiesOverview";
-import CookiesTableOfContents from "./TableOfContents/CookiesTableOfContents";
-import CookiesSections from "./Sections/CookiesSections";
 import Footer from "@/src/components/common/footer/Footer";
+import ContactSection from "@/src/components/ui/doc/contact/ContactSection";
+import SectionTemplate from "@/src/components/ui/doc/section/SectionTemplate";
+import { cookiesData } from "@/src/content/cookies/cookies-index";
 
 const CookiesPage = () => {
   return (
@@ -11,8 +12,14 @@ const CookiesPage = () => {
 
       <main className="mx-auto max-w-4xl px-4 py-12">
         <CookiesOverview />
-        <CookiesTableOfContents />
-        <CookiesSections />
+        <SectionTemplate
+          title="Terms of Service Sections"
+          sections={cookiesData.sections}
+        />
+        <ContactSection
+          title="Contact Us"
+          description="If you have questions about our use of cookies or this Cookie Policy, you can contact our team."
+        />
       </main>
 
       <Footer />
