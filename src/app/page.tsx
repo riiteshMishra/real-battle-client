@@ -11,17 +11,19 @@ import SupportedGames from "../components/core/Home/supported-games/Index";
 const Home = () => {
   return (
     <>
-      <main className="relative min-h-screen overflow-hidden">
-        <HeroSection />
-        <Features />
-        <HowItsWork />
-        <Stats />
-        <SupportedGames />
-        <HomepageFaq />
-        <FinalCta />
-        <ContactUs />
-      </main>
-      <Footer />
+      <div className="min-h-screen bg-slate-50 bg-[linear-gradient(to_right,rgba(59,130,246,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(59,130,246,0.06)_1px,transparent_1px)] bg-size-[32px_32px] dark:bg-slate-950 dark:bg-[linear-gradient(to_right,rgba(96,165,250,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(96,165,250,0.05)_1px,transparent_1px)]">
+        <main className="relative min-h-screen overflow-hidden">
+          <HeroSection />
+          <Features />
+          <HowItsWork />
+          <Stats />
+          <SupportedGames />
+          <HomepageFaq />
+          <FinalCta />
+          <ContactUs />
+        </main>
+        <Footer />
+      </div>
     </>
   );
 };
