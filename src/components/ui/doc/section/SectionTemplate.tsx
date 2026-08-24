@@ -8,14 +8,28 @@ import type { DocumentSection } from "./types";
 interface SectionTemplateProps {
   sections: DocumentSection[];
   title: string;
+  description?: string;
 }
 
-const SectionTemplate = ({ sections, title }: SectionTemplateProps) => {
+const SectionTemplate = ({
+  sections,
+  title,
+  description,
+}: SectionTemplateProps) => {
   return (
     <section aria-labelledby="sections-title" className="mb-12">
-      <h2 id="sections-title" className="sr-only">
-        {title}
-      </h2>
+      <div className="mb-6">
+        <h2
+          id="privacy-sections-title"
+          className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white"
+        >
+          {title ?? "Enter your title"}
+        </h2>
+
+        <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+          {description ?? "Enter your description"}
+        </p>
+      </div>
 
       <div className="space-y-8">
         {sections.map((section) => (

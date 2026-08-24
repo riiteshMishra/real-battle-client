@@ -16,7 +16,6 @@ import { accountDeletionSection } from "./sections/account-deletion";
 import { childrenSection } from "./sections/children";
 import { internationalSection } from "./sections/international";
 import { policyChangesSection } from "./sections/policy-changes";
-import { contactSection } from "./sections/contact";
 
 export const privacyData = {
   title: "Privacy Policy",
@@ -42,7 +41,6 @@ export const privacyData = {
     childrenSection,
     internationalSection,
     policyChangesSection,
-    contactSection,
   ],
 };
 
