@@ -1,12 +1,12 @@
-import { RefundSection } from "../types";
+import type { RefundSection } from "../types";
 
 export const refundEligibilitySection: RefundSection = {
   id: "refund-eligibility",
   title: "10. Refund Eligibility",
   type: "subsections",
+
   subsections: [
     {
-      id: "eligible",
       title: "Situations That May Qualify",
       items: [
         "Tournament cancellation by Real Battle.",
@@ -16,8 +16,8 @@ export const refundEligibilitySection: RefundSection = {
         "Other circumstances expressly identified as refundable in the applicable tournament rules.",
       ],
     },
+
     {
-      id: "not-eligible",
       title: "Situations That Generally Do Not Qualify",
       items: [
         "Player voluntarily withdraws after the applicable cancellation deadline.",
