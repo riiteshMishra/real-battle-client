@@ -15,7 +15,7 @@ const HeroContent: React.FC<HeroContentProps> = ({ title, description }) => {
         {title}
       </h1>
 
-      <p className="mt-5 max-w-2xl text-base leading-7 text-blue-100 sm:text-lg md:text-xl dark:text-slate-300">
+      <p className="mt-5 max-w-2xl text-base leading-7 sm:text-lg md:text-xl dark:text-slate-300">
         {description}
       </p>
     </>

@@ -25,7 +25,7 @@ const HeroTemplet = ({
   return (
     <section
       aria-labelledby="hero-title"
-      className={`relative isolate overflow-hidden text-white ${background}`}
+      className={`relative isolate overflow-hidden text-black dark:text-white ${background}`}
     >
       {bgGlow ? bgGlow : <BGlow />}
 

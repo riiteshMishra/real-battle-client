@@ -79,5 +79,5 @@ export const sectionGradient = {
   cyan: "bg-linear-to-br from-cyan-50 via-sky-50 to-slate-50 dark:from-cyan-950/40 dark:via-sky-950/30 dark:to-slate-950",
 
   slate:
-    "bg-linear-to-br from-slate-50 via-gray-50 to-zinc-100 dark:from-slate-950 dark:via-gray-950 dark:to-zinc-950",
+    "bg-linear-to-br from-slate-800 via-gray-800 to-zinc-800 dark:from-slate-950 dark:via-gray-950 dark:to-zinc-950",
 };
