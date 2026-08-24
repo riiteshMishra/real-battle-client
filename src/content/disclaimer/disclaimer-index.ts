@@ -9,15 +9,13 @@ import { externalLinksSection } from "./sections/external-links";
 import { availabilitySection } from "./sections/availability";
 import { liabilitySection } from "./sections/liability";
 import { changesSection } from "./sections/changes";
-import { contactSection } from "./sections/contact";
-
-import { DisclaimerSection } from "./types";
+import { DocumentSection } from "@/src/components/ui/doc/section/types";
 
 export const disclaimerData: {
   title: string;
   description: string;
   lastUpdated: string;
-  sections: DisclaimerSection[];
+  sections: DocumentSection[];
 } = {
   title: "Disclaimer",
 
@@ -38,6 +36,5 @@ export const disclaimerData: {
     availabilitySection,
     liabilitySection,
     changesSection,
-    contactSection,
   ],
 };
