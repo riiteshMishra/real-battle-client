@@ -1,10 +1,9 @@
-import RefundHero from "./hero/RefundHero";
-import RefundOverview from "./overview/RefundOverview";
-import RefundTableOfContents from "./TableOfContents/RefundTableOfContents";
-import RefundSections from "./Sections/RefundSections";
-import RefundActions from "./Actions/RefundActions";
-import RefundContact from "./Contact/RefundContact";
+import RefundHero from "./RefundHero";
+import RefundOverview from "./RefundOverview";
 import Footer from "@/src/components/common/footer/Footer";
+import SectionTemplate from "@/src/components/ui/doc/section/SectionTemplate";
+import { refundData } from "@/src/content/refund/refund-index";
+import ContactSection from "@/src/components/ui/doc/contact/ContactSection";
 
 const RefundPage = () => {
   return (
@@ -13,10 +12,16 @@ const RefundPage = () => {
 
       <main className="mx-auto max-w-4xl px-4 py-12">
         <RefundOverview />
-        <RefundTableOfContents />
-        <RefundSections />
-        <RefundActions />
-        <RefundContact />
+        <SectionTemplate
+          title="Refund Policy"
+          description="Review the terms and conditions that govern refunds, cancellations, payments, and refund eligibility on Real Battle."
+          sections={refundData.sections}
+        />
+        <ContactSection
+          title="Contact Us"
+          description="Have questions about these Terms of Service, tournament rules, account restrictions, payments, or other Real Battle services? Contact our team."
+          note="Please include relevant account, tournament, or transaction details when contacting us so that we can assist you efficiently."
+        />{" "}
       </main>
 
       <Footer />

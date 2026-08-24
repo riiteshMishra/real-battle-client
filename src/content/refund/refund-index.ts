@@ -13,7 +13,6 @@ import { refundMethodSection } from "./sections/refund-method";
 import { processingTimeSection } from "./sections/processing-time";
 import { chargebackSection } from "./sections/chargeback";
 import { changesSection } from "./sections/changes";
-import { contactSection } from "./sections/contact";
 
 import { RefundSection } from "./types";
 
@@ -46,6 +45,5 @@ export const refundData: {
     processingTimeSection,
     chargebackSection,
     changesSection,
-    contactSection,
   ],
 };
