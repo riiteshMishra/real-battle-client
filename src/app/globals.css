@@ -93,7 +93,6 @@
 
 @theme inline {
   /* Fonts */
-  --font-sekuya: var(--font-sekuya);
   --font-bricolage: var(--font-bricolage);
   --font-roboto: var(--font-roboto);
 
@@ -179,4 +178,11 @@ body {
 
 .animate-check-color {
   animation: check-color 2.5s ease-in-out infinite;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #a855f7, #22d3ee, #f97316);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }

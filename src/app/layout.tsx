@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { Sekuya, Bricolage_Grotesque, Roboto, Geist } from "next/font/google";
+import {
+  Bricolage_Grotesque,
+  Roboto,
+  Geist,
+  Stack_Sans_Headline,
+} from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/common/navbar/Navbar";
 import { Toaster } from "sonner";
@@ -8,14 +13,6 @@ import { cn } from "@/lib/utils";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
-// FONTS
-const sekuya = Sekuya({
-  variable: "--font-sekuya",
-  subsets: ["latin"],
-  weight: "400",
-  adjustFontFallback: false,
-});
-
 const bricolage = Bricolage_Grotesque({
   variable: "--font-bricolage",
   subsets: ["latin"],
@@ -23,6 +20,11 @@ const bricolage = Bricolage_Grotesque({
 
 const roboto = Roboto({
   variable: "--font-roboto",
+  subsets: ["latin"],
+});
+
+const headline = Stack_Sans_Headline({
+  variable: "--font-headline",
   subsets: ["latin"],
 });
 
@@ -98,7 +100,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         "h-full",
         "antialiased",
         roboto.variable,
-        sekuya.variable,
+        headline.variable,
         bricolage.variable,
         "font-sans",
         geist.variable,

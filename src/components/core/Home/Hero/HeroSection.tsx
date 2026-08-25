@@ -14,7 +14,7 @@ const HeroSection = () => {
         className="font-bricolage sm:text mx-auto max-w-95 text-center text-sm font-medium capitalize"
       />
       <Steps />
-      <HeroImg />
+      {/* <HeroImg /> */}
     </section>
   );
 };
