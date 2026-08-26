@@ -1,4 +1,5 @@
 import Footer from "../components/common/footer/Footer";
+import Heading from "../components/common/Heading";
 import ContactUs from "../components/core/Home/contact/Index";
 import FinalCta from "../components/core/Home/CTA/Index";
 import HomepageFaq from "../components/core/Home/Faq/HomepageFaq";

@@ -32,24 +32,25 @@ const LeftSection = ({
   className = "",
 }: LeftSectionProps) => {
   return (
-    <section className={`flex max-w-2xl flex-col gap-6 ${className}`}>
+    <section
+      className={`sm:justisfy-start flex max-w-2xl flex-col items-center justify-center gap-6 sm:items-start ${className}`}
+    >
       {/* Headline */}
-      <h1 className="text-foreground text-xl leading-tight font-bold tracking-tight capitalize md:text-3xl lg:text-5xl">
+      <h1 className="text-foreground text-center text-2xl leading-tight font-bold tracking-tight capitalize sm:text-left md:text-3xl lg:text-4xl">
         {title} <br />
-        {highlightText && (
-          <strong className="text-primary gradient-text underline">
-            {highlightText}
-          </strong>
-        )}
       </h1>
 
+      {highlightText && (
+        <strong className="text-primary gradient-text text-center text-2xl underline sm:text-left md:text-3xl lg:text-4xl">
+          {highlightText}
+        </strong>
+      )}
       {/* Description */}
       {description && (
-        <p className="text-muted-foreground font-roboto max-w-xl text-base leading-relaxed md:text-sm">
+        <p className="text-muted-foreground font-roboto max-w-xl text-center text-xs leading-relaxed sm:text-left md:text-sm">
           {description}
         </p>
       )}
-
       {/* Buttons */}
       <div className="mt-2 flex flex-wrap items-center gap-3">
         <Button asChild size="lg" className="rounded-full px-6">
@@ -67,7 +68,6 @@ const LeftSection = ({
           </Button>
         )}
       </div>
-
       {/* Trust Badges */}
       {badges.length > 0 && (
         <div className="mt-1 flex flex-wrap gap-2">

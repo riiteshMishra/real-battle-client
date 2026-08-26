@@ -48,19 +48,19 @@ export const footerData: FooterSection[] = [
       {
         id: 2,
         text: "Pricing",
-        href: "#pricing",
+        href: "/pricing",
         icon: GiPriceTag,
       },
       {
         id: 3,
         text: "How It Works",
-        href: "#how-it-works",
+        href: "/how-it-works",
         icon: MdHowToVote,
       },
       {
         id: 4,
-        text: "Tournaments",
-        href: "/tournaments",
+        text: "Leaderboard",
+        href: "/leaderboard",
         icon: TbTournament,
       },
     ],
@@ -77,13 +77,13 @@ export const footerData: FooterSection[] = [
       {
         id: 6,
         text: "FAQ",
-        href: "#faq",
+        href: "/faq",
         icon: CircleHelp,
       },
       {
         id: 7,
         text: "Contact Us",
-        href: "#contact",
+        href: "/contact-us",
         icon: Mail,
       },
       {
