@@ -24,7 +24,7 @@ const RightSection = ({
         <Image
           src={imageSrc}
           alt={imageAlt}
-
+          loading="eager"
           className="pointer-events-none rounded-2xl object-contain drop-shadow-2xl"
           priority
         />

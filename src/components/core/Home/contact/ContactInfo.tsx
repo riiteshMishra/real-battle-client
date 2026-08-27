@@ -2,7 +2,7 @@ import { Mail, MessageCircle } from "lucide-react";
 
 const ContactInfo = () => {
   return (
-    <div className="border-foreground/10 bg-foreground/3 rounded-2xl border p-6 backdrop-blur-xl lg:col-span-2">
+    <div className="border-foreground/10 bg-foreground/3 h-fit rounded-2xl border p-6 backdrop-blur-xl lg:col-span-2">
       <h3 className="text-2xl font-semibold">Need Help?</h3>
 
       <p className="text-foreground/60 mt-3 text-sm leading-6">
@@ -18,7 +18,7 @@ const ContactInfo = () => {
 
           <div>
             <p className="text-foreground/40 text-xs">Email</p>
-            <p className="text-sm font-medium">support@realbattle.com</p>
+            <p className="text-sm font-medium">support.realbattle@gmail.com</p>
           </div>
         </div>
 

@@ -26,6 +26,7 @@ const roboto = Roboto({
 const headline = Stack_Sans_Headline({
   variable: "--font-headline",
   subsets: ["latin"],
+  adjustFontFallback: false,
 });
 
 // META - DATA

@@ -13,38 +13,69 @@ const Card = ({ id, title, description, image }: CardProps) => {
 
   return (
     <article
-      className={`group flex h-full flex-col rounded-2xl border border-white/20 bg-white/5 p-5 shadow-lg shadow-gray-600/30 backdrop-blur-xl transition-all duration-300 select-none hover:-translate-y-1 hover:border-cyan-400/40 active:scale-[0.98] active:border-cyan-400/60 active:bg-white/10 ${isOffset ? "lg:translate-y-8" : ""}`}
+      className={`group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-white/6 bg-linear-to-b from-neutral-900/80 to-neutral-950/90 p-5 shadow-2xl transition-all duration-500 ease-out select-none hover:-translate-y-3 hover:border-cyan-500/30 hover:shadow-[0_20px_50px_-12px_rgba(6,182,212,0.15)] active:scale-[0.99] ${
+        isOffset ? "md:translate-y-6 lg:translate-y-12" : ""
+      }`}
     >
-      {/* Number */}
-      <div className="mb-4 flex items-center gap-2">
-        <span className="bg-linear-to-r from-purple-500 via-cyan-400 to-orange-500 bg-clip-text text-2xl font-bold text-transparent transition-transform duration-300 group-hover:scale-110 group-active:scale-105">
-          {String(id).padStart(2, "0")}
-        </span>
+      {/* Background Interactive Mesh (Halka sa depth dene ke liye) */}
+      <div className="absolute top-0 right-0 -z-10 h-32 w-32 rounded-full bg-cyan-500/10 blur-3xl transition-all duration-700 group-hover:scale-150 group-hover:bg-purple-500/15" />
 
-        <div className="h-px w-8 bg-cyan-400/30 transition-colors duration-300 group-active:bg-cyan-400/70" />
+      {/* Main Content Wrapper */}
+      <div className="flex flex-col">
+        {/* Top Header Section */}
+        <div className="mb-6 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <span className="bg-linear-to-r from-cyan-400 to-purple-400 bg-clip-text font-mono text-xs font-bold tracking-widest text-transparent uppercase">
+              Project
+            </span>
+            <span className="font-mono text-2xl font-black tracking-tighter text-white/20 transition-all duration-300 group-hover:text-cyan-400/40">
+              {String(id).padStart(2, "0")}
+            </span>
+          </div>
+
+          {/* Futuristic Corner Arrow Accent */}
+          <div className="flex h-7 w-7 items-center justify-center rounded-lg border border-white/4 bg-white/2 text-neutral-500 transition-all duration-300 group-hover:border-cyan-500/30 group-hover:bg-cyan-500/10 group-hover:text-cyan-400">
+            <svg
+              xmlns="http://w3.org"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2.5}
+              stroke="currentColor"
+              className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+              />
+            </svg>
+          </div>
+        </div>
+
+        {/* Premium Image Container */}
+        <div className="relative mb-5 aspect-16/10 w-full overflow-hidden rounded-xl border border-white/8 bg-neutral-950 sm:aspect-4/3">
+          <Image
+            src={image}
+            alt={title}
+            title={`${title} image`}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+            className="pointer-events-none object-cover transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-105"
+            priority={id <= 2}
+          />
+        </div>
+
+        {/* Text Section */}
+        <h3 className="mb-2 text-xl font-bold tracking-tight text-white/95 transition-colors duration-300 group-hover:text-cyan-400">
+          {title}
+        </h3>
+        <p className="line-clamp-3 text-sm leading-relaxed font-normal text-neutral-400">
+          {description}
+        </p>
       </div>
 
-      {/* Image */}
-      <div className="relative mb-5 aspect-square overflow-hidden rounded-xl border border-white/5">
-        <Image
-          src={image}
-          alt={title}
-          title={`${title} image`}
-          fill
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-          className="pointer-events-none object-cover opacity-80 transition-all duration-500 group-hover:scale-105 group-hover:opacity-100 group-active:scale-[1.02] group-active:opacity-100"
-        />
-
-        {/* Overlay */}
-        <div className="from-background/80 pointer-events-none absolute inset-0 bg-linear-to-t via-transparent to-transparent transition-opacity duration-300 group-active:opacity-70" />
-      </div>
-
-      {/* Content */}
-      <h3 className="text-foreground mb-2 text-xl font-semibold transition-colors duration-300 group-active:text-cyan-400">
-        {title}
-      </h3>
-
-      <p className="text-foreground/60 grow text-sm leading-6">{description}</p>
+      {/* Decorative Bottom Accent Bar */}
+      <div className="mt-5 h-0.5 w-0 bg-linear-to-r from-cyan-500 via-purple-500 to-transparent transition-all duration-500 ease-out group-hover:w-full" />
     </article>
   );
 };
